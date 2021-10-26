@@ -1,0 +1,73 @@
+body {
+    background-color: #F2F2F2;
+    margin: 0px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+}
+
+p{
+    font-size: 20px;
+}
+
+.innpakning {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction:column;
+    
+}
+
+.navbar {
+    width: 100%;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #2C3137;
+    
+
+}
+
+.navbar a:hover {
+    background-color: #797777;
+    border-radius: 5px;
+}
+.navbar li {
+    float: left;
+    margin-left: 40px;
+}
+
+.navbar a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+.navbar img {
+    width: 50px;
+    height: 50px;
+}
+
+.innhold {
+    margin: auto;
+    width: 100%;
+    
+}
+
+.bilde_rammede img, .bilde_frivillige img {
+    width: 50%;
+    float: left;
+    height: 100%;
+    height: 650px;
+
+    
+    
+}
+
+
