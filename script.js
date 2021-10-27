@@ -153,17 +153,55 @@ boliger = [
     }
 ]
 
-console.log(boliger)
-
 fake_city_input = "Oslo"
-fake_number_of_people_input = 3
+fake_number_of_people_input = 5
+
+const innhold = document.getElementById("innhold")
+const filtered_houses = []
 
 function filterHouses(){
     for (i = 0; i<boliger.length; i++){
-        if(fake_city_input == boliger[i].by && fake_number_of_people_input <= boliger[i].antall_personer){
-            console.log(boliger[i])
+        if (fake_city_input == boliger[i].by && fake_number_of_people_input <= boliger[i].antall_personer){
+            filtered_houses.push(boliger[i])
+            
+
         }
     }
 }
 
-filterHouses()
+
+function presentHouses(){
+    filterHouses()
+    for (i = 0; i<filtered_houses.length; i++){
+
+        const houseDiv = document.createElement("div")
+
+        const by = document.createElement("li")
+        const img = document.createElement("li")
+        const adresse = document.createElement("li")
+        const antall_personer = document.createElement("li")
+        const bolig_type = document.createElement("li")
+        
+        const by_data = document.createTextNode(filtered_houses[i].by)
+        const img_data = document.createTextNode(filtered_houses[i].img)
+        const adresse_data = document.createTextNode(filtered_houses[i].adresse)
+        const antall_personer_data = document.createTextNode(filtered_houses[i].antall_personer)
+        const bolig_type_data = document.createTextNode(filtered_houses[i].bolig_type)
+
+        by.appendChild(by_data)
+        img.appendChild(img_data)
+        adresse.appendChild(adresse_data)
+        antall_personer.appendChild(antall_personer_data)
+        bolig_type.appendChild(bolig_type_data)
+
+        houseDiv.appendChild(by)
+        houseDiv.appendChild(img)
+        houseDiv.appendChild(adresse)
+        houseDiv.appendChild(antall_personer)
+        houseDiv.appendChild(bolig_type)
+
+        innhold.appendChild(houseDiv)
+    }
+}
+
+presentHouses()
