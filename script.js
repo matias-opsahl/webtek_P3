@@ -170,47 +170,48 @@ function filterHouses(){
     }
 }
 
+filterHouses()
+console.log(filtered_houses)
 
 
+// function presentHouses(){
+//     filterHouses()
+//     for (i = 0; i<filtered_houses.length; i++){
 
-function presentHouses(){
-    filterHouses()
-    for (i = 0; i<filtered_houses.length; i++){
+//         const houseDiv = document.createElement("div")
 
-        const houseDiv = document.createElement("div")
+//         const by = document.createElement("li")
+//         const li_img = document.createElement("li")
 
-        const by = document.createElement("li")
-        const li_img = document.createElement("li")
-
-        const adresse = document.createElement("li")
-        const antall_personer = document.createElement("li")
-        const bolig_type = document.createElement("li")
+//         const adresse = document.createElement("li")
+//         const antall_personer = document.createElement("li")
+//         const bolig_type = document.createElement("li")
         
-        const by_data = document.createTextNode(filtered_houses[i].by)
-        const adresse_data = document.createTextNode(filtered_houses[i].adresse)
-        const antall_personer_data = document.createTextNode(filtered_houses[i].antall_personer)
-        const bolig_type_data = document.createTextNode(filtered_houses[i].bolig_type)
+//         const by_data = document.createTextNode(filtered_houses[i].by)
+//         const adresse_data = document.createTextNode(filtered_houses[i].adresse)
+//         const antall_personer_data = document.createTextNode(filtered_houses[i].antall_personer)
+//         const bolig_type_data = document.createTextNode(filtered_houses[i].bolig_type)
 
     
-        const img = document.createElement('img')
-        img.src = "../img/bilder_i_byer/" + filtered_houses[i].img
-        img.width = 200
-        img.height = 200
-        li_img.appendChild(img)
+//         const img = document.createElement('img')
+//         img.src = "../img/bilder_i_byer/" + filtered_houses[i].img
+//         img.width = 200
+//         img.height = 200
+//         li_img.appendChild(img)
 
-        by.appendChild(by_data)
-        adresse.appendChild(adresse_data)
-        antall_personer.appendChild(antall_personer_data)
-        bolig_type.appendChild(bolig_type_data)
+//         by.appendChild(by_data)
+//         adresse.appendChild(adresse_data)
+//         antall_personer.appendChild(antall_personer_data)
+//         bolig_type.appendChild(bolig_type_data)
 
-        houseDiv.appendChild(by)
-        houseDiv.appendChild(li_img)
-        houseDiv.appendChild(adresse)
-        houseDiv.appendChild(antall_personer)
-        houseDiv.appendChild(bolig_type)
+//         houseDiv.appendChild(by)
+//         houseDiv.appendChild(li_img)
+//         houseDiv.appendChild(adresse)
+//         houseDiv.appendChild(antall_personer)
+//         houseDiv.appendChild(bolig_type)
 
-        innhold.appendChild(houseDiv)
-    }
-}
+//         innhold.appendChild(houseDiv)
+//     }
+// }
 
-presentHouses()
+// presentHouses()
