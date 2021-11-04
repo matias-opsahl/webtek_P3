@@ -173,3 +173,4 @@ function filterHouses(){
 
 filterHouses()
 console.log(filtered_houses)
+
