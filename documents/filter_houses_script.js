@@ -149,57 +149,9 @@ function attributesToList(a) {//tar egenskapene til bolig objektene og returner 
   
   //objekter for testing **Denne delen skal byttes ut av den 'fake' databasen laget av matias
   
-  b = {
-    adr: "kjøiaveien 59",
-    by: "Oslo",
-    bildeSti: "../placeholder.png",
-    soverom: 4,
-    bad: 2,
-    sengeplasser: 5,
-    kvm: 120,
-  };
   
-  c = {
-    adr: "Nedre alle 5",
-    by: "Trondheim",
-    bildeSti: "../placeholder.png",
-    soverom: 4,
-    bad: 2,
-    sengeplasser: 5,
-    kvm: 120,
-  };
   
-  d = {
-    adr: "Perlevej 8",
-    by: "Skagen",
-    bildeSti: "../placeholder.png",
-    soverom: 4,
-    bad: 2,
-    sengeplasser: 5,
-    kvm: 120,
-  };
-  
-  e = {
-    adr: "Kongensgate",
-    by: "oslo",
-    bildeSti: "../placeholder.png",
-    soverom: 5,
-    bad: 2,
-    sengeplasser: 6,
-    kvm: 100,
-  };
-  
-  f = {
-    adr: "Kongensgate",
-    by: "oslo",
-    bildeSti: "../placeholder.png",
-    soverom: 5,
-    bad: 2,
-    sengeplasser: 6,
-    kvm: 100,
-  };
-  
-  boliger = [b, c, d, e, f];//testarray med boligobjekter
+  boliger = [];//testarray med boligobjekter
   cbArray = [];//array som inneholder alle checkBoxene
   
   createContent(boliger);// selve funksjonskallet av testarrayen
