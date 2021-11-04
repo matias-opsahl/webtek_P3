@@ -59,6 +59,7 @@ body{
 
 .navbar_inner p{
     text-align: center;
+    font-size: 1.75vw;
 }
 
 #navbar a{
@@ -110,4 +111,37 @@ body{
         margin-bottom: 0;
         padding-bottom: 15%;
     }
+
+    .navbar_inner p {
+
+        font-size: 40px;
+    }
 }
+
+/* @media only screen and (max-width: 1150px){
+    .navbar_inner p {
+
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    .navbar_inner p {
+
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 850px){
+    .navbar_inner p {
+
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width: 750px){
+    .navbar_inner p {
+
+        font-size: 10px;
+    }
+} */
