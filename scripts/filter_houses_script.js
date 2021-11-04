@@ -238,7 +238,6 @@ presentHouses()
 
 sendBtn.onclick = (e) =>{
     e.preventDefault()
-    filterHouses()
-    presentHouses()
+    console.log("hei")
 }
 

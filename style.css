@@ -2,6 +2,8 @@ body{
     margin: 0;
     font-size: 20px;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    flex-direction: column;
 }
 
 #navbar{
@@ -9,7 +11,6 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: left;
-    margin-bottom: 10px;
     overflow: hidden;
     position: sticky;
     top: 0;
@@ -18,7 +19,6 @@ body{
 .navbar_outer{
     margin: 1%;
     width: 10%;
-    /* overflow: hidden; */
 }
 
 .navbar_outer_img{
@@ -51,14 +51,14 @@ body{
 
 #footer{
     width: 100%;
-    height: 5%;
+    bottom: 0;
     background-color: #D3D3D3;
     text-align: center;
-    margin-bottom: 0;
 }
 
 .navbar_inner p{
     text-align: center;
+    font-size: 1.75vw;
 }
 
 #navbar a{
@@ -235,13 +235,6 @@ body {
     margin: auto;
 }
 
-#footer{
-    width: 100%;
-    height: 5%;
-    background-color: #D3D3D3;
-    text-align: center;
-    margin-bottom: 0;
-}
 
 .navbar_inner p{
     text-align: center;
@@ -267,7 +260,30 @@ body {
 }
 
 #food{
-    background-color: #f2f2f2
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    background-color: #f2f2f2;
+}
+
+#food #left{
+    width: 50%;
+    min-height: 100%;
+}
+
+#food #left img{
+    min-height: 100%;
+    width: 100%;
+}
+
+#food #right{
+    min-height: 100%;
+    width: 50%;
+}
+
+#food #right img{
+    min-height: 100%;
+    width: 100%;
 }
 
 @media only screen and (max-width: 600px) {
@@ -363,13 +379,13 @@ hentet: 27.oktober*/
   color: #202020;
 }
 
-#footer {
+/* #footer {
   background-color: #2c3137;
   height: 5%;
   width: 100%;
   text-align: center;
   color: white;
-}
+} */
 
 #navInnhold > li {
   display: inline-block;
@@ -459,4 +475,9 @@ input[type="submit"]:hover {
     height: 15px;
     width: 15px;
   }
+
+    .navbar_inner p {
+
+        font-size: 40px;
+    }
 }
