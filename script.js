@@ -154,7 +154,7 @@ boliger = [
 ]
 
 fake_city_input = "Oslo"
-fake_number_of_people_input = 5
+fake_number_of_people_input = 3
 
 const innhold = document.getElementById("innhold")
 const filtered_houses = []
@@ -164,10 +164,13 @@ function filterHouses(){
         if (fake_city_input == boliger[i].by && fake_number_of_people_input <= boliger[i].antall_personer){
             filtered_houses.push(boliger[i])
             
+            
 
         }
     }
 }
+
+
 
 
 function presentHouses(){
@@ -177,25 +180,31 @@ function presentHouses(){
         const houseDiv = document.createElement("div")
 
         const by = document.createElement("li")
-        const img = document.createElement("li")
+        const li_img = document.createElement("li")
+
         const adresse = document.createElement("li")
         const antall_personer = document.createElement("li")
         const bolig_type = document.createElement("li")
         
         const by_data = document.createTextNode(filtered_houses[i].by)
-        const img_data = document.createTextNode(filtered_houses[i].img)
         const adresse_data = document.createTextNode(filtered_houses[i].adresse)
         const antall_personer_data = document.createTextNode(filtered_houses[i].antall_personer)
         const bolig_type_data = document.createTextNode(filtered_houses[i].bolig_type)
 
+    
+        const img = document.createElement('img')
+        img.src = "../img/bilder_i_byer/" + filtered_houses[i].img
+        img.width = 200
+        img.height = 200
+        li_img.appendChild(img)
+
         by.appendChild(by_data)
-        img.appendChild(img_data)
         adresse.appendChild(adresse_data)
         antall_personer.appendChild(antall_personer_data)
         bolig_type.appendChild(bolig_type_data)
 
         houseDiv.appendChild(by)
-        houseDiv.appendChild(img)
+        houseDiv.appendChild(li_img)
         houseDiv.appendChild(adresse)
         houseDiv.appendChild(antall_personer)
         houseDiv.appendChild(bolig_type)
