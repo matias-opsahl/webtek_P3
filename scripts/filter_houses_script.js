@@ -156,21 +156,89 @@ boliger = [
 fake_city_input = "Oslo"
 fake_number_of_people_input = 3
 
-const innhold = document.getElementById("food")
+const inBy = document.getElementById("inBy")
+const inPersoner = document.getElementById("inPersoner")
+const sendBtn = document.getElementById("submit")
 
+const contentWrapper = document.getElementById("contentWrapper")
 const filtered_houses = []
+
 
 function filterHouses(){
     for (i = 0; i<boliger.length; i++){
         if (fake_city_input == boliger[i].by && fake_number_of_people_input <= boliger[i].antall_personer){
             filtered_houses.push(boliger[i])
-            
-            
-
         }
+
     }
 }
 
-filterHouses()
-console.log(filtered_houses)
+function showAll() {
+    for (i = 0; i<boliger.length; i++){
+        filtered_houses.push(boliger[i])
+    }
+}
+
+function presentHouses(){
+    showAll()
+    for (i = 0; i<filtered_houses.length; i++){
+        const checkBox = document.createElement("input")
+        checkBox.type = "checkbox"
+        checkBox.className = "checkBoxClass"
+
+        const content = document.createElement("div")
+        content.className = "content"
+
+        const ul = document.createElement("ul")
+        ul.className = "listClass"
+
+        const by = document.createElement("li")
+        by.className = "listItemClass"
+
+        const li_img = document.createElement("li")
+        li_img.className = "listItemClass"
+
+        const adresse_h3 = document.createElement("h3")
+
+        const antall_personer = document.createElement("li")
+        antall_personer.className = "listItemClass"
+
+        const bolig_type = document.createElement("li")
+        bolig_type.className = "listItemClass"
+        
+        const by_data = document.createTextNode(`By: ${filtered_houses[i].by}`)
+        const adresse_data = document.createTextNode(filtered_houses[i].adresse)
+        const antall_personer_data = document.createTextNode(`${filtered_houses[i].antall_personer} sengeplasser`)
+        const bolig_type_data = document.createTextNode(filtered_houses[i].bolig_type)
+
+    
+        const img = document.createElement('img')
+        img.className = "husBilder"
+        img.src = "../img/bilder_i_byer/" + filtered_houses[i].img
+        li_img.appendChild(img)
+
+        by.appendChild(by_data)
+        adresse_h3.appendChild(adresse_data)
+        antall_personer.appendChild(antall_personer_data)
+        bolig_type.appendChild(bolig_type_data)
+
+        ul.appendChild(adresse_h3)
+        ul.appendChild(by)
+        ul.appendChild(antall_personer)
+        ul.appendChild(bolig_type)
+
+        content.appendChild(li_img)
+        content.appendChild(ul)
+        content.appendChild(checkBox)
+
+        contentWrapper.appendChild(content)
+    }
+}
+presentHouses()
+
+sendBtn.onclick = (e) =>{
+    e.preventDefault()
+    filterHouses()
+    presentHouses()
+}
 
