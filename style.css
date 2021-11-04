@@ -2,6 +2,8 @@ body{
     margin: 0;
     font-size: 20px;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    flex-direction: column;
 }
 
 #navbar{
@@ -9,7 +11,6 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: left;
-    margin-bottom: 10px;
     overflow: hidden;
     position: sticky;
     top: 0;
@@ -18,7 +19,6 @@ body{
 .navbar_outer{
     margin: 1%;
     width: 10%;
-    /* overflow: hidden; */
 }
 
 .navbar_outer_img{
@@ -51,10 +51,9 @@ body{
 
 #footer{
     width: 100%;
-    height: 5%;
+    bottom: 0;
     background-color: #D3D3D3;
     text-align: center;
-    margin-bottom: 0;
 }
 
 .navbar_inner p{
@@ -82,8 +81,30 @@ body{
 }
 
 #food{
+    display: flex;
+    flex-direction: row;
     text-align: center;
-    background-color: #f2f2f2
+    background-color: #f2f2f2;
+}
+
+#food #left{
+    width: 50%;
+    min-height: 100%;
+}
+
+#food #left img{
+    min-height: 100%;
+    width: 100%;
+}
+
+#food #right{
+    min-height: 100%;
+    width: 50%;
+}
+
+#food #right img{
+    min-height: 100%;
+    width: 100%;
 }
 
 @media only screen and (max-width: 600px) {
@@ -117,31 +138,3 @@ body{
         font-size: 40px;
     }
 }
-
-/* @media only screen and (max-width: 1150px){
-    .navbar_inner p {
-
-        font-size: 18px;
-    }
-}
-
-@media only screen and (max-width: 1000px){
-    .navbar_inner p {
-
-        font-size: 15px;
-    }
-}
-
-@media only screen and (max-width: 850px){
-    .navbar_inner p {
-
-        font-size: 13px;
-    }
-}
-
-@media only screen and (max-width: 750px){
-    .navbar_inner p {
-
-        font-size: 10px;
-    }
-} */
