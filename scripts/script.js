@@ -53,7 +53,6 @@ logo_a.appendChild(logo_img)
 navbar_inner_img.appendChild(logo_a)
 navbar_outer_img.appendChild(navbar_inner_img)
 navbar.appendChild(navbar_outer_img)
-console.log(navbar)
 
 // setter attributene til hjemmeside link
 const hjem_a = document.createElement('a')

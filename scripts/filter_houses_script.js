@@ -153,23 +153,20 @@ boliger = [
     }
 ]
 
-fake_city_input = "Oslo"
-fake_number_of_people_input = 3
-
-const inBy = document.getElementById("inBy")
-const inPersoner = document.getElementById("inPersoner")
 const sendBtn = document.getElementById("submit")
 
 const contentWrapper = document.getElementById("contentWrapper")
-const filtered_houses = []
-
+const form = document.getElementById("frm")
+let filtered_houses = []
 
 function filterHouses(){
+    const inBy = document.getElementById("inBy")
+    const inPersoner = document.getElementById("inPersoner")
+
     for (i = 0; i<boliger.length; i++){
-        if (fake_city_input == boliger[i].by && fake_number_of_people_input <= boliger[i].antall_personer){
+        if ((inBy.value) == (boliger[i].by) && inPersoner.value <= boliger[i].antall_personer){
             filtered_houses.push(boliger[i])
         }
-
     }
 }
 
@@ -179,8 +176,8 @@ function showAll() {
     }
 }
 
-function presentHouses(){
-    showAll()
+function presentHouses(func){
+    func()
     for (i = 0; i<filtered_houses.length; i++){
         const checkBox = document.createElement("input")
         checkBox.type = "checkbox"
@@ -234,10 +231,14 @@ function presentHouses(){
         contentWrapper.appendChild(content)
     }
 }
-presentHouses()
+// Viser alle husene som finnes som default. Endres når vi spesifiserer søket
+presentHouses(showAll)
 
-sendBtn.onclick = (e) =>{
+
+form.onsubmit = (e) => {
     e.preventDefault()
-    console.log("hei")
-}
+    filtered_houses = []
+    contentWrapper.innerHTML = ""
+    presentHouses(filterHouses)
 
+}
