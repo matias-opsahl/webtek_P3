@@ -13,7 +13,7 @@
         <div id='masterWrapper'>
             <div id='wrapper'>
                <div id= 'filterWrapper'>
-                   <h2 id='filtrerOverskrift'> Filtrer boliger</h2>
+                   <h3 id='filtrerOverskrift'>Filtrer boliger</h3>
                    <div id= form>
                        <form id="frm">
        
@@ -37,15 +37,17 @@
                             <hr>
                             <br>
                             <div id="kontaktInfo">
+                                <h3>Kontakt
+                                    informasjon</h3>
                                 <label> Ditt navn:
-                                    <input type='text'class='input' required>
+                                    <input type='text' class='input' id="kontaktInfo_navn" required>
                                 </label>
         
-                                <label> Telefonr:
-                                    <input type="number"  name="inputNumber" class="input" min='10000000' max = '99999999' maxlength="8" oninvalid="this.setCustomValidity('Må være 8 siffer, kun tall!')" oninput="this.setCustomValidity('')" required=''>
+                                <label> Telefon nummer:
+                                    <input type="number"  name="inputNumber" class="input" id="kontaktInfo_tlf" min='10000000' max = '99999999' maxlength="8" oninvalid="this.setCustomValidity('Må være 8 siffer, kun tall!')" oninput="this.setCustomValidity('')" required=''>
                                 </label>
                             </div>
-
+                            <br>
                            <input type='submit' id="submit" value="søk etter boliger">
                        </form>
                    </div>

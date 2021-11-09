@@ -302,7 +302,6 @@ body {
   height: 100%;
   background-color: #f2f2f2;
   padding:3%;
-  border: 3px solid green;
 }
   
 .rad1::after {
@@ -475,8 +474,7 @@ hentet: 27.oktober*/
     background-color: #d3d3d3;
   }
   
-  
-  
+
 
 @media only screen and (max-width: 600px) {
   .content {
@@ -500,6 +498,7 @@ hentet: 27.oktober*/
     width: 100%;
     flex-direction: row;
     padding: 10px;
+
   }
 
   label {
@@ -607,6 +606,32 @@ button{
   font-size: 80%;
 }
 
+#oppe button {
+  width: 15%;
+  background-color: black;
+  color: white;
+  border: none;
+}
+#oppe button:hover {
+  background-color: rgb(65, 65, 65);
+  color: white;
+}
+input[type="submit"]{
+  margin: auto;
+  border: none;
+  height: 45px;
+  border-radius: 20px;
+  background-color: black;
+  color: white;
+  border: none;
+  font-size: 80%;
+  
+}
+
+input[type="submit"]:hover{
+  background-color: rgb(65, 65, 65);
+  color: white;
+}
 
 #dropDown{
   width: 100%;
@@ -662,4 +687,16 @@ button{
     padding-left: 0;
   }
 
+}
+
+#form input[type="number"], #form input[type="text"]{
+  width: 100%;
+}
+
+#form #dropdown {
+  position: relative;
+  background-color: dodgerblue;
+  width: 100%;
+
+  
 }

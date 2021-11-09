@@ -203,6 +203,9 @@ const contentWrapper = document.getElementById("contentWrapper")
 const form = document.getElementById("frm")
 const oppe = document.getElementById("oppe")
 const nede = document.getElementById("nede")
+const kontaktInfo_navn = document.getElementById("kontaktInfo_navn")
+const kontaktInfo_tlf = document.getElementById("kontaktInfo_tlf")
+
 
 let filtered_houses = []
 
@@ -309,7 +312,7 @@ function presentHouses(func_param){
         content.appendChild(li_img)
         content.appendChild(ul)
         content.appendChild(checkBox)
-
+        content.style.backgroundColor="white"
         // Tilslutt putter vi content inn i nede div-elementet. 
         nede.appendChild(content)
     }
@@ -350,11 +353,16 @@ const send_soknad = document.getElementById("send_bolig_knapp")
 
 send_soknad.addEventListener("click", () => {
     checkBoxStat(cbArray)
-    
-    if (returnList.length < 1 ){
-        console.log("tom") 
+    if (kontaktInfo_navn.value == "" || kontaktInfo_tlf.value == ""){
+        alert("Fyll ut kontaktinformasjonen før du sender inn søknad")
     }
-    else {
-        oppe.innerHTML = ""
-        nede.innerHTML = `Du har nå sendt søknad om ${returnList} ` }
+    else { 
+        if (returnList.length < 1 ){
+            console.log("tom") 
+        }
+        else {
+            oppe.innerHTML = ""
+            nede.innerHTML = `Du har nå sendt søknad om ${returnList} ` }
+    }
 })
+
