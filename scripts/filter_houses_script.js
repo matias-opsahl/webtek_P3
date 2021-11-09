@@ -363,6 +363,8 @@ send_soknad.addEventListener("click", () => {
         else {
             oppe.innerHTML = ""
             nede.innerHTML = `Du har nå sendt søknad om ${returnList} ` }
+            nede.innerHTML += "<br>"
+            nede.innerHTML += `Du vil få melding på nummeret: ${kontaktInfo_tlf.value} `            
     }
 })
 
