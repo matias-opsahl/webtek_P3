@@ -286,7 +286,7 @@ body {
     width: 100%;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
     #navbar{
         flex-direction: column;
         position: relative;
@@ -480,4 +480,62 @@ input[type="submit"]:hover {
 
         font-size: 40px;
     }
+}
+
+.om_oss img {
+    border-radius: 50%;
+}
+
+.kolonne1 {
+    float: left;
+    margin-left: 10%;
+    width: 20%;
+    padding: 5px;
+}
+  
+.rad1::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+  
+.headerOmOss {
+    text-align: center;
+}
+#omOss1 {
+    text-align: center;
+}
+
+#visjon {
+    text-align: center;
+    max-width: 33.3%;
+    margin-left: 33.3%;
+}
+  
+.Intro {
+    text-align: center;
+    width: 50%;
+    margin-left: 25%;
+}
+
+.avslutningOmOss {
+    text-align: center;
+    margin-left: 12.5%;
+    width: 75%;
+}
+
+.div_om_oss{
+    width: 100%;
+}
+
+.div_om_oss img{
+    border-radius: 50%;
+}
+
+.div_om_oss_tittel{
+    width: 100%;
+}
+
+.div_om_oss_visjon{
+    width: 100%;
 }
