@@ -434,55 +434,8 @@ input[type="submit"] {
 input[type="submit"]:hover {
   background-color: #d3d3d3;
 }
-@media only screen and (max-width: 600px) {
-  .content {
-    
-    width: 100%;
-    margin-left: 0;
-  }
-  .input {
-    width: 130px;
-  }
-  #filtrerOverskrift{
-      display: none;
-  }
 
-  
 
-  #wrapper {
-    flex-direction: column;
-  }
-  #filterWrapper {
-    width: 100%;
-    flex-direction: row;
-    padding: 10px;
-  }
-
-  label {
-    display: default;
-    margin-bottom: 2%;
-  }
-  input {
-    display: default;
-  }
-  #contentWrapper {
-    padding: 0;
-    width: 100%;
-  }
-  #masterWrapper {
-    width: 100%;
-  }
-  .checkBoxClass{
-
-    height: 15px;
-    width: 15px;
-  }
-
-    .navbar_inner p {
-
-        font-size: 40px;
-    }
-}
 
 .om_oss img {
     border-radius: 50%;
@@ -542,112 +495,165 @@ input[type="submit"]:hover {
     width: 100%;
 }
 
-#frivilligFlexWrapper{
-
-  flex-direction: column !important;
-      
-}
-#formWrap>form>label{
-  text-align: center !important;
-  font-size: 5vw !important;
-}
-#formWrap>form{
-  margin-left: 0 !important;
-  text-align: right !important;
-}
-.opplastetBilde{
-  margin-left : 5%;
-
-      
-}
-
   
 
 
 #frivilligFlexWrapper{
-display: flex;
-flex-direction: row;
-width: 100%;
-background-color: #D3D3D3;
-padding: 3%;
-
-
-
-}
-
-
-
-
-
-#bildeDiv{
-
-
-min-width:100%;
-
-margin-top:15%;
-
-
-
-}
-#opplastning{
-
-  
-  text-align: left;
-  padding: 5%;
-}
-
-#formWrap{
   display: flex;
-  flex-direction: column;
-  min-width: 50%;
-  
-  padding:3%;
-}
-#formWrap>form>label{
-  display: inline;
-  text-align: right;
-  font-size: 1.5vw;
-  
-}
-#formWrap>form>label>input{
-
-  
-  width: 40%;
-  height:7%;
-  margin-left: 4%;
-  margin-bottom: 5%;
-}
-
-#formWrap>form{
-  
-  text-align: right;
-  
-  margin-top: 3%;
-  margin-left: 15%;
-}
-
-.opplastetBilde{
-
+  flex-direction: row;
   width: 100%;
+  background-color: #f2f2f2;
+  padding: 1%;
   
-  display: inline-block;
-  top:50%;
-  border:solid 1px black;
   
-}
-#btnLastOpp{
-  margin-bottom: 5%;
-  background-color: white;
-  border: solid black 1px;
   
-  height: 35px;
-  border-radius: 20px;
-  width: 20%;
-}
+  }
+  
+  
+  
+  
+  
+  #bildeDiv{
+  
+  
+  min-width:100%;
+  
+  margin-top:15%;
+  
+  
+  
+  }
+  #opplastning{
+  
+    
+    text-align: left;
+    padding: 5%;
+  }
+  
+  #formWrap{
+    display: flex;
+    flex-direction: column;
+    min-width: 50%;
+    
+    padding:3%;
+  }
+  #formWrap>form>label{
+    display: inline;
+    text-align: right;
+    font-size: 1.5vw;
+    
+  }
+  #formWrap>form>label>input{
+  
+    
+    width: 40%;
+    height:7%;
+    margin-left: 4%;
+    margin-bottom: 5%;
+  }
+  
+  #formWrap>form{
+    
+    text-align: right;
+    
+    margin-top: 3%;
+    margin-left: 15%;
+  }
+  
+  .opplastetBilde{
+  
+    width: 100%;
+    
+    display: inline-block;
+    top:50%;
+    border:solid 1px black;
+    
+  }
+  #btnLastOpp{
+    margin-bottom: 5%;
+    background-color: white;
+    border: solid black 1px;
+    
+    height: 35px;
+    border-radius: 20px;
+    width: 20%;
+  }
+  
+  #btnLastOpp:hover{
+    background-color: #d3d3d3;
+  }
+  
+  
+  
 
-#btnLastOpp:hover{
-  background-color: #d3d3d3;
-}
+@media only screen and (max-width: 600px) {
+  .content {
+    
+    width: 100%;
+    margin-left: 0;
+  }
+  .input {
+    width: 130px;
+  }
+  #filtrerOverskrift{
+      display: none;
+  }
+
+  
+
+  #wrapper {
+    flex-direction: column;
+  }
+  #filterWrapper {
+    width: 100%;
+    flex-direction: row;
+    padding: 10px;
+  }
+
+  label {
+    display: default;
+    margin-bottom: 2%;
+  }
+  input {
+    display: default;
+  }
+  #contentWrapper {
+    padding: 0;
+    width: 100%;
+  }
+  #masterWrapper {
+    width: 100%;
+  }
+  .checkBoxClass{
+
+    height: 15px;
+    width: 15px;
+  }
+
+    .navbar_inner p {
+
+        font-size: 40px;
+    }
+    #frivilligFlexWrapper{
+
+      flex-direction: column !important;
+          
+    }
+    #formWrap>form>label{
+      text-align: center !important;
+      font-size: 5vw !important;
+    }
+    #formWrap>form{
+      margin-left: 0 !important;
+      text-align: right !important;
+    }
+    .opplastetBilde{
+      margin-left : 5%;
+    
+          
+    }
+}    
+
 
 
 
