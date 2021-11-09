@@ -286,157 +286,6 @@ body {
     width: 100%;
 }
 
-@media only screen and (max-width: 800px) {
-    #navbar{
-        flex-direction: column;
-        position: relative;
-    }
-
-    .navbar_outer{
-        width: 80%;
-        margin-left: 5%;
-        padding: 20px;
-    }
-
-    .navbar_inner{
-        width: 100%;
-        height: 100%;
-    }
-
-    .navbar_outer_img{
-        visibility: hidden;
-    }
-
-    p{
-        margin-bottom: 0;
-        padding-bottom: 15%;
-    }
-}
-  /*max-width: 30%;
-  object-fit: contain;
-}*/
-
-#contentWrapper {
-  display: flex;
-  flex-direction: column;
-  width: 85%;
-  height: 100%;
-  background-color: #f2f2f2;
-  padding:3%;
-}
-
-label {
-  display: inline-block;
-  width: 160px;
-  text-align: left;
-  margin-bottom:3%;
-}
-
-#navBar {
-  width: 100%;
-  height: 12%;
-  background-color: #2c3137;
-  text-align: center;
-  color: white;
-}
-/*css en for styling av checkBox er hentet fra følgende kilde: https://www.html5canvastutorials.com/blog/2012/06/custom-form-radio-checkbox/
-hentet: 27.oktober*/
-.checkBoxClass {
-  -webkit-appearance: none;
-  background-color: #fafafa;
-  border: 1.5px solid #4e4e4e;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05),
-    inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
-  padding: 9px;
-  border-radius: 3px;
-  display: inline-block;
-  position: relative;
-  width: 30px;
-  height: 30px;
-
-  right: 8%;
-  margin-top: 8%;
-  
-
-}
-
-
-.checkBoxClass:checked {
-  background-color: #e9ecee;
-  border: 1px solid #adb8c0;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05),
-    inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05),
-    inset 15px 10px -12px rgba(255, 255, 255, 0.1);
-  color: #99a1a7;
-}
-
-.checkBoxClass:checked:after {
-  content: "\2714";
-  font-size: 35px;
-  position: absolute;
-  top: -8px;
-  left: 5px;
-  color: #202020;
-}
-
-/* #footer {
-  background-color: #2c3137;
-  height: 5%;
-  width: 100%;
-  text-align: center;
-  color: white;
-} */
-
-#navInnhold > li {
-  display: inline-block;
-  height: 100%;
-  margin-right: 10%;
-}
-
-#navInnhold > li > a {
-  text-decoration: none;
-  font-size: 1.5em;
-  height: 20px;
-  color: white;
-
-  padding: 14px 16px;
-}
-#navInnhold > li > a:hover {
-  background-color: #d3d3d3;
-}
-
-.input {
-  width: 100%;
-}
-
-input[type="submit"] {
-  background-color: white;
-  border: solid black 1px;
-  width: 80%;
-  height: 35px;
-  border-radius: 20px;
-}
-
-.btn {
-  background-color: white;
-  border: solid black 1px;
-  width: 15%;
-  height: 35px;
-  border-radius: 20px;
-  position: relative;
-  left: 42%;
-  margin-bottom: 2%;
-}
-.btn :hover {
-  background-color: #d3d3d3;
-}
-
-input[type="submit"]:hover {
-  background-color: #d3d3d3;
-}
-
-
-
 .om_oss img {
     border-radius: 50%;
 }
@@ -494,6 +343,7 @@ input[type="submit"]:hover {
 .div_om_oss_visjon{
     width: 100%;
 }
+
 
   
 
@@ -658,3 +508,114 @@ input[type="submit"]:hover {
 
 
 
+.kontakt_oss{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.QnA{
+  width: 50%;
+}
+
+.Spm{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.qNa2 {
+  margin: auto;
+  padding: 25px 15px;
+  width: 40%;
+  cursor: alias;
+}
+
+.qNaBody {
+  text-align: center;
+  margin: auto;
+  padding: 0 10px;
+  width: 80%;
+  display: none;
+  overflow: hidden;
+}
+
+.hr-strek {
+  margin: auto;
+  width: 60%;
+}
+
+label {
+  width: 100%;
+}
+
+form {
+  text-align: left;
+  padding-left: 20%;
+}
+
+input{
+  margin-bottom: 10px;
+}
+
+button{
+  height: 35px;
+  width: 100px;
+  border-radius: 20px;
+  font-size: 80%;
+}
+
+#form{
+    border: 2px solid red;
+}
+
+@media only screen and (max-width: 800px) {
+  #navbar{
+      flex-direction: column;
+      position: relative;
+  }
+
+  .navbar_outer{
+      width: 80%;
+      margin-left: 5%;
+      padding: 20px;
+  }
+
+  .navbar_inner{
+      width: 100%;
+      height: 100%;
+  }
+
+  .navbar_outer_img{
+      visibility: hidden;
+  }
+
+  p{
+      margin-bottom: 0;
+      padding-bottom: 15%;
+  }
+
+  .navbar_inner p {
+
+      font-size: 40px;
+  }
+
+  .kontakt_oss{
+    flex-direction: column;
+  }
+
+  .QnA{
+    width: 100%;
+  }
+
+  .Spm{
+    width: 100%;
+    /* text-align: center; */
+  }
+
+  form{
+    text-align: center;
+    padding-left: 0;
+  }
+
+}
