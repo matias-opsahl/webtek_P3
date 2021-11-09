@@ -524,8 +524,8 @@ padding: 3%;
 
 
 min-width:100%;
-position: relative;
-top:15%;
+
+margin-top:15%;
 
 
 
@@ -590,9 +590,6 @@ top:15%;
   background-color: #d3d3d3;
 }
 
-/*#opplastning>label{
 
-  
-}
 
 
