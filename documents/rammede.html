@@ -32,26 +32,36 @@
                            </select>
                            </label>
                            <label for ='inPersoner'> Antall personer:
-                           <input type='text'class='input' id='inPersoner' name = 'inPersoner'>
+                           <input type='number' min="1" class='input' id='inPersoner' name = 'inPersoner' required>
                             </label>
-       
-                            <!-- <label> Navn på kontaktperson:
-                                <input type='text'class='input'>
-                            </label>
-       
-                            <label> Telefonnr til kontaktperson:
-                                <input type='number'class='input'>
-                            </label> -->
+                            <hr>
+                            <br>
+                            <div id="kontaktInfo">
+                                <label> Ditt navn:
+                                    <input type='text'class='input' required>
+                                </label>
+        
+                                <label> Telefonr:
+                                    <input type="number"  name="inputNumber" class="input" min='10000000' max = '99999999' maxlength="8" oninvalid="this.setCustomValidity('Må være 8 siffer, kun tall!')" oninput="this.setCustomValidity('')" required=''>
+                                </label>
+                            </div>
 
-                           <input type='submit' id="submit">
+                           <input type='submit' id="submit" value="søk etter boliger">
                        </form>
                    </div>
                </div>
-       
+               
+               
                 <div id = 'contentWrapper'>
-                   <h2 id='tilgjengligHead'> Tilgjengelige boliger:</h2>
+                   <div id="oppe">
+                    <h2 id='tilgjengligHead'> Tilgjengelige boliger</h2>
+                    <button id="send_bolig_knapp"> Send inn søknad </button>
+                    <br/>
+                    <br/>
+                   </div>
+                   <div id="nede"></div>
                 </div>
-       
+                
             </div>
         </div>
     </div> <!-- Legg ting inn her -->

@@ -2,6 +2,8 @@
 // 2-4 rekkehus
 // 4-> hus
 
+// Her deklarer vi bolig "databasen" med alle husene som skal vises. 
+cbArray=[];
 boliger = [
     
     {
@@ -25,7 +27,7 @@ boliger = [
     {
         by: "Oslo",
         img: "l6.jpeg",
-        adresse: "Jespers gate 12",
+        adresse: "General ruges vei 214",
         antall_personer: "2",
         bad: "1",
         kvm: "72kvm",
@@ -195,49 +197,58 @@ boliger = [
     }
 ]
 
-// TODO
-// const array_with_only_one_of_each_city_for_dropDownList = []
-
-// for (let i = 0; i < boliger.length; i++){
-//     if (boliger[i].by != array_with_only_one_of_each_city_for_dropDownList){
-//         array_with_only_one_of_each_city_for_dropDownList.push(boliger[i].by)
-//     }
-// }
-// console.log(array_with_only_one_of_each_city_for_dropDownList)
 
 const sendBtn = document.getElementById("submit")
-
 const contentWrapper = document.getElementById("contentWrapper")
 const form = document.getElementById("frm")
+const oppe = document.getElementById("oppe")
+const nede = document.getElementById("nede")
+
 let filtered_houses = []
 
+// Her lages filter funksjonen. Den henter inn input feltene  for nærmeste by, antall personer.
 function filterHouses(){
     const inBy = document.getElementById("dropDown")
     const inPersoner = document.getElementById("inPersoner")
 
+// Her looper vi gjennom boliger-arrayen "databasen" og sammenligner verdiene fra input feltene mot arrayen.
+// Hvis input dataen opfyller kravene i if-statementen skal de gjeldene boligene dyttes inn i arrayen filtered_houses.
+
     for (i = 0; i<boliger.length; i++){
-        if ((inBy.value) == (boliger[i].by) && inPersoner.value <= boliger[i].antall_personer){
+        if ((inBy.value) == (boliger[i].by) && parseInt(inPersoner.value) <= boliger[i].antall_personer){
             filtered_houses.push(boliger[i])
         }
+
     }
 }
 
+// Her lager vi en showAll funksjon som kjøres med en gang, slik at alle boligene kommer opp med en gang vi kommer til siden. 
 function showAll() {
     for (i = 0; i<boliger.length; i++){
         filtered_houses.push(boliger[i])
     }
 }
 
-function presentHouses(func){
-    func()
+// Her har vi funksjonen som oppretter html-elementene for hver bolig som ligger i filtered_houses arrayen.
+// Den tar inn en funksjon som paramter, og på denne måten kan vi vise husene med ulike utgangspunkt avhengig av hvilken funksjon vi vil at skal påvirke hva som blir filtrert.
+function presentHouses(func_param){
+    func_param()
+    cbArray=[];
     for (i = 0; i<filtered_houses.length; i++){
+        // lager input element og endrer det til checkbox + gir det en class.
+
         const checkBox = document.createElement("input")
         checkBox.type = "checkbox"
         checkBox.className = "checkBoxClass"
+        checkBox.id ='cb'+i+'';
+        cbArray.push(checkBox);
 
+
+        // lager et div element som skal inneholde alt om hver bolig + gir den class.
         const content = document.createElement("div")
         content.className = "content"
 
+        // lager en ul som skal inneholde nesten all bolig-dataen som li-elementer + gir den class
         const ul = document.createElement("ul")
         ul.className = "listClass"
 
@@ -261,6 +272,7 @@ function presentHouses(func){
         const kvm = document.createElement("li")
         kvm.className = "listItemClass"
         
+        // lager nye variabler som vi putter dataen fra bolig-arrayen inn i. 
         const by_data = document.createTextNode(`By: ${filtered_houses[i].by}`)
         const adresse_data = document.createTextNode(filtered_houses[i].adresse)
         const antall_personer_data = document.createTextNode(`${filtered_houses[i].antall_personer} sengeplasser`)
@@ -269,11 +281,15 @@ function presentHouses(func){
         const kvm_data = document.createTextNode(filtered_houses[i].kvm)
 
     
+        // lager her et img-element + gir den classname + legger til src som referer til bildene i img-folderen vår.
+        // Vi gir den også en alt. Deretter putter vi bilde inn i li elementet vi lagde istad.
         const img = document.createElement('img')
         img.className = "husBilder"
         img.src = "../img/bilder_i_byer/" + filtered_houses[i].img
+        img.alt = filtered_houses[i].img
         li_img.appendChild(img)
 
+        // Her putter vi data variabelene inn i li-elementene vi lagde ovenfor. 
         by.appendChild(by_data)
         adresse_h3.appendChild(adresse_data)
         antall_personer.appendChild(antall_personer_data)
@@ -281,6 +297,7 @@ function presentHouses(func){
         bad.appendChild(bad_data)
         kvm.appendChild(kvm_data)
 
+        // Deretter putter vi li-elementene inn i ul-elementet.
         ul.appendChild(adresse_h3)
         ul.appendChild(by)
         ul.appendChild(antall_personer)
@@ -288,21 +305,56 @@ function presentHouses(func){
         ul.appendChild(bad)
         ul.appendChild(kvm)
 
+        // Deretter putter vi li-bilde elementet + ul lista og checkboxen inn i content diven.
         content.appendChild(li_img)
         content.appendChild(ul)
         content.appendChild(checkBox)
 
-        contentWrapper.appendChild(content)
+        // Tilslutt putter vi content inn i nede div-elementet. 
+        nede.appendChild(content)
     }
 }
 // Viser alle husene som finnes som default. Endres når vi spesifiserer søket
 presentHouses(showAll)
 
 
+// Her har vi submit-knappen 
+returnList=[]
+
 form.onsubmit = (e) => {
     e.preventDefault()
     filtered_houses = []
-    contentWrapper.innerHTML = ""
+    nede.innerHTML = ""
     presentHouses(filterHouses)
+    
+}
+
+function checkBoxStat(list){
+   returnList = [];
+   
+   console.log(list.length);
+ for (let i=0; i<list.length; i++){
+     if (list[i].checked==true)
+     returnList.push(filtered_houses[i].adresse);
+ }
+
+ if(returnList.length==0) {
+     alert( 'du har ikke søkt noen bolig.')
+ }
+
+
 
 }
+
+const send_soknad = document.getElementById("send_bolig_knapp")
+
+send_soknad.addEventListener("click", () => {
+    checkBoxStat(cbArray)
+    
+    if (returnList.length < 1 ){
+        console.log("tom") 
+    }
+    else {
+        oppe.innerHTML = ""
+        nede.innerHTML = `Du har nå sendt søknad om ${returnList} ` }
+})
