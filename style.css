@@ -329,7 +329,7 @@ label {
   display: inline-block;
   width: 160px;
   text-align: left;
-  margin-bottom: 20%;
+  margin-bottom:3%;
 }
 
 #navBar {
@@ -447,6 +447,8 @@ input[type="submit"]:hover {
       display: none;
   }
 
+  
+
   #wrapper {
     flex-direction: column;
   }
@@ -480,4 +482,117 @@ input[type="submit"]:hover {
 
         font-size: 40px;
     }
+
+    #frivilligFlexWrapper{
+
+      flex-direction: column !important;
+      
+    }
+    #formWrap>form>label{
+      text-align: center !important;
+      font-size: 5vw !important;
+    }
+    #formWrap>form{
+      margin-left: 0 !important;
+      text-align: right !important;
+    }
+    .opplastetBilde{
+      margin-left : 5%;
+
+      
+    }
+
+  
 }
+
+#frivilligFlexWrapper{
+display: flex;
+flex-direction: row;
+width: 100%;
+background-color: #D3D3D3;
+padding: 3%;
+
+
+
+}
+
+
+
+
+
+#bildeDiv{
+
+
+min-width:100%;
+position: relative;
+top:15%;
+
+
+
+}
+#opplastning{
+
+  
+  text-align: left;
+  padding: 5%;
+}
+
+#formWrap{
+  display: flex;
+  flex-direction: column;
+  min-width: 50%;
+  
+  padding:3%;
+}
+#formWrap>form>label{
+  display: inline;
+  text-align: right;
+  font-size: 1.5vw;
+  
+}
+#formWrap>form>label>input{
+
+  
+  width: 40%;
+  height:7%;
+  margin-left: 4%;
+  margin-bottom: 5%;
+}
+
+#formWrap>form{
+  
+  text-align: right;
+  
+  margin-top: 3%;
+  margin-left: 15%;
+}
+
+.opplastetBilde{
+
+  width: 100%;
+  
+  display: inline-block;
+  top:50%;
+  border:solid 1px black;
+  
+}
+#btnLastOpp{
+  margin-bottom: 5%;
+  background-color: white;
+  border: solid black 1px;
+  
+  height: 35px;
+  border-radius: 20px;
+  width: 20%;
+}
+
+#btnLastOpp:hover{
+  background-color: #d3d3d3;
+}
+
+/*#opplastning>label{
+
+  
+}
+
+
