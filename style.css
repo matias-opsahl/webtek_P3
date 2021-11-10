@@ -625,15 +625,16 @@ margin-top: 3%;
 }
 
 .qNa2:after{
-  content: '\02795'; /*Legger inn pluss tegn */
-  font-size: 40%;
+  content: '\254B'; /*Legger inn pluss tegn */
+  font-size: 50%;
   color: black;
   float: right;
   margin-top: 10%;
 }
 
 .active:after{
-  content: '\2796';
+  /* Legger til minus tegn */
+  content: '\2501'; 
 }
 
 .qNaBody {
