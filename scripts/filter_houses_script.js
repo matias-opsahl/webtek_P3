@@ -338,6 +338,12 @@ form_div.addEventListener("input", (e) => {
     filtered_houses = []
     nede.innerHTML = ""
     presentHouses(filterHouses)
+    if (filtered_houses.length < 1){
+        kontaktInfo_div.innerHTML = "Ingen boliger oppfyller kravet til antall personer du har skrevet inn"
+    }
+    else {
+        kontaktInfo_div.innerHTML = ""
+    }
 }) 
 
 // Her lager vi en funksjon som lager en knapp og, og som i tillegg får en eventlistener. Denne koden kjøres
