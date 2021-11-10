@@ -388,16 +388,13 @@ function checkBoxStat(list){
     for (let i=0; i<list.length; i++){
         if (list[i].checked==true)
             returnList.push(filtered_houses[i].adresse);
-        
     }
 
     if(returnList.length==0) {
-        console.log("hei")
-        
         return "Du har ikke søkt noen bolig"
-        
     }
-    else{
+
+    else {
         return String(returnList)
     }
 }
@@ -416,7 +413,7 @@ frm_kontaktInfo.onsubmit = (e) => {
 
        else {
 
-            // kontaktInfo_div.innerHTML = ""
+            kontaktInfo_div.innerHTML = ""
             oppe.innerHTML = ""
             nede.innerHTML = `Du har nå sendt søknad om ${a} ` 
             nede.innerHTML += "<br><br>"
