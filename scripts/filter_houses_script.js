@@ -212,13 +212,13 @@ const kontaktInfo_tlf = document.getElementById("kontaktInfo_tlf")
 
 let filtered_houses = []
 
-// Her lages filter funksjonen. Den henter inn input feltene  for nærmeste by, antall personer.
+// Her lages filter funksjonen. Den henter inn dataen fra input feltene til nærmeste by og antall personer.
 function filterHouses(){
     const inBy = document.getElementById("dropDown")
     const inPersoner = document.getElementById("inPersoner")
 
-// Her looper vi gjennom boliger-arrayen "databasen" og sammenligner verdiene fra input feltene mot arrayen.
-// Hvis input dataen opfyller kravene i if-statementen skal de gjeldene boligene dyttes inn i arrayen filtered_houses.
+// Her looper vi gjennom bolig-arrayen "databasen" og sammenligner verdiene fra input feltene mot arrayen.
+// Hvis input dataen opfyller kravene i if-statementen skal de gjeldene boligene dyttes inn i arrayen filtered_houses, som vi senere tar utgangspunkt i når vi skal filtrere søket. 
 
     for (i = 0; i<boliger.length; i++){
         if ((inBy.value) == (boliger[i].by) && parseInt(inPersoner.value) <= boliger[i].antall_personer){
@@ -239,14 +239,16 @@ function showAll() {
 // Den tar inn en funksjon som paramter, og på denne måten kan vi vise husene med ulike utgangspunkt avhengig av hvilken funksjon vi vil at skal påvirke hva som blir filtrert.
 function presentHouses(func_param){
     func_param()
+    // nullstuller checkBox arrayen.
     cbArray=[];
     for (i = 0; i<filtered_houses.length; i++){
-        // lager input element og endrer det til checkbox + gir det en class.
 
+        // lager input element og endrer det til checkbox + gir det en class.
         const checkBox = document.createElement("input")
         checkBox.type = "checkbox"
         checkBox.className = "checkBoxClass"
         checkBox.id ='cb'+i+'';
+        // Dytter checkbox inputten inn i arrayen cbArray
         cbArray.push(checkBox);
 
 
@@ -295,7 +297,7 @@ function presentHouses(func_param){
         img.alt = filtered_houses[i].img
         li_img.appendChild(img)
 
-        // Her putter vi data variabelene inn i li-elementene vi lagde ovenfor. 
+        // Her putter vi data variabelene inn i li-elementene vi lagde ovenfor i starten av denne funksjonen. 
         by.appendChild(by_data)
         adresse_h3.appendChild(adresse_data)
         antall_personer.appendChild(antall_personer_data)
@@ -324,10 +326,13 @@ function presentHouses(func_param){
 presentHouses(showAll)
 
 
-// Her har vi submit-knappen 
+// setter returnList til empty. Denne skal inneholde checkboxene som har blitt 
 returnList=[]
 
-
+// legger til en eventlistener som lytter til endringer på input elementene. Vi har jo kun 2 input elementer
+// i denne diven, og det er inBy og inPersoner. Under her blir presentHouses funskjonen kjørt med filterHouses som en parameter.
+// Dette resulterer i at når man endrer på inputen til en av de to feltene vil filter og present funksjonen kjøres
+// og de boligene som stemmer med dataen fra inputtene vil bli vist frem. 
 form_div.addEventListener("input", (e) => {
     e.preventDefault()
     filtered_houses = []
@@ -335,9 +340,11 @@ form_div.addEventListener("input", (e) => {
     presentHouses(filterHouses)
 }) 
 
+// Her lager vi en funksjon som lager en knapp og, og som i tillegg får en eventlistener. Denne koden kjøres
+// bare hvis man submitter uten å ha valgt et hus. Da får man opp denne knappen og litt hjelpetekst, slik at man
+// forstår hva man skal gjøre. 
 function lagKnapp(){
     nede.innerHTML='';
-    
 
     let knapp = document.createElement('button')
     let br = document.createElement("br")
@@ -358,12 +365,10 @@ function lagKnapp(){
 function checkBoxStat(list){
    returnList = [];
    
-   
    console.log(list.length);
     for (let i=0; i<list.length; i++){
         if (list[i].checked==true)
-        
-        returnList.push(filtered_houses[i].adresse);
+            returnList.push(filtered_houses[i].adresse);
         
     }
 
