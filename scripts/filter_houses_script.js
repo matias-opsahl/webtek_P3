@@ -8,7 +8,7 @@ boliger = [
     
     {
         by: "Oslo",
-        img: "h6.jpeg",
+        img: "h6.jpg",
         adresse: "Håkons gate 24",
         antall_personer: "5",
         bad: "3",
@@ -17,7 +17,7 @@ boliger = [
     },
     {
         by: "Oslo",
-        img: "r6.jpeg",
+        img: "r6.jpg",
         adresse: "Sanders gate 76",
         antall_personer: "3",
         bad: "2",
@@ -26,7 +26,7 @@ boliger = [
     },
     {
         by: "Oslo",
-        img: "l6.jpeg",
+        img: "l6.jpg",
         adresse: "General ruges vei 214",
         antall_personer: "2",
         bad: "1",
@@ -35,7 +35,7 @@ boliger = [
     },
     {
         by: "Trondheim",
-        img: "h5.jpeg",
+        img: "h5.jpg",
         adresse: "Matias gate 98",
         antall_personer: "4",
         bad: "2",
@@ -44,7 +44,7 @@ boliger = [
     },
     {
         by: "Trondheim",
-        img: "r6.jpeg",
+        img: "r5.jpg",
         adresse: "Jespers gate 12",
         antall_personer: "2",
         bad: "1",
@@ -53,7 +53,7 @@ boliger = [
     },
     {
         by: "Trondheim",
-        img: "l5.jpeg",
+        img: "l5.jpg",
         adresse: "Hansens gate 22",
         antall_personer: "2",
         bad: "1",
@@ -62,7 +62,7 @@ boliger = [
     },
     {
         by: "Kristiansand",
-        img: "h4.jpeg",
+        img: "h4.jpg",
         adresse: "Fredriks gate 81",
         antall_personer: "6",
         bad: "3",
@@ -71,7 +71,7 @@ boliger = [
     },
     {
         by: "Kristiansand",
-        img: "r4.jpeg",
+        img: "r4.jpg",
         adresse: "Markus gate 92",
         antall_personer: "2",
         bad: "2",
@@ -80,7 +80,7 @@ boliger = [
     },
     {
         by: "Kristiansand",
-        img: "l4.jpeg",
+        img: "l4.jpg",
         adresse: "Bilals gate 77",
         antall_personer: "1",
         bad: "1",
@@ -170,7 +170,7 @@ boliger = [
     },
     {
         by: "Fredrikstad",
-        img: "h7.jpeg",
+        img: "h7.jpg",
         adresse: "Kåres gate 45",
         antall_personer: "5",
         bad: "3",
@@ -179,7 +179,7 @@ boliger = [
     },
     {
         by: "Fredrikstad",
-        img: "r7.jpeg",
+        img: "r7.jpg",
         adresse: "Hesthagen 70",
         antall_personer: "4",
         bad: "2",
@@ -188,7 +188,7 @@ boliger = [
     },
     {
         by: "Fredrikstad",
-        img: "l7.jpeg",
+        img: "l7.jpg",
         adresse: "Bentes gate 91",
         antall_personer: "2",
         bad: "1",
@@ -200,11 +200,14 @@ boliger = [
 
 const sendBtn = document.getElementById("submit")
 const contentWrapper = document.getElementById("contentWrapper")
-const form = document.getElementById("frm")
+const form_div = document.getElementById("form_div")
+const frm_kontaktInfo = document.getElementById("frm_kontaktInfo")
 const oppe = document.getElementById("oppe")
 const nede = document.getElementById("nede")
+const kontaktInfo_div = document.getElementById("kontaktInfo_div")
 const kontaktInfo_navn = document.getElementById("kontaktInfo_navn")
 const kontaktInfo_tlf = document.getElementById("kontaktInfo_tlf")
+
 
 
 let filtered_houses = []
@@ -324,47 +327,76 @@ presentHouses(showAll)
 // Her har vi submit-knappen 
 returnList=[]
 
-form.onsubmit = (e) => {
+
+form_div.addEventListener("input", (e) => {
     e.preventDefault()
     filtered_houses = []
     nede.innerHTML = ""
     presentHouses(filterHouses)
+}) 
+
+function lagKnapp(){
+    nede.innerHTML='';
     
-}
+
+    let knapp = document.createElement('button')
+    let br = document.createElement("br")
+    let br2 = document.createElement("br")
+    knapp.innerHTML='Tilbake'
+    knapp.style.color = 'white';
+    knapp.addEventListener('click', () => {
+        window.location.replace('../documents/rammede.html');
+    })
+    oppe.innerHTML='Du har ikke valgt noen bolig! \n Huk av en bolig under tilgjengelige boliger, og send søknaden på nytt.'
+    oppe.appendChild(br)
+    oppe.appendChild(br2)
+    oppe.appendChild(knapp)
+    
+
+  }
 
 function checkBoxStat(list){
    returnList = [];
    
+   
    console.log(list.length);
- for (let i=0; i<list.length; i++){
-     if (list[i].checked==true)
-     returnList.push(filtered_houses[i].adresse);
- }
+    for (let i=0; i<list.length; i++){
+        if (list[i].checked==true)
+        
+        returnList.push(filtered_houses[i].adresse);
+        
+    }
 
- if(returnList.length==0) {
-     alert( 'du har ikke søkt noen bolig.')
- }
-
-
-
+    if(returnList.length==0) {
+        console.log("hei")
+        
+        return "Du har ikke søkt noen bolig"
+        
+    }
+    else{
+        return String(returnList)
+    }
 }
 
-const send_soknad = document.getElementById("send_bolig_knapp")
 
-send_soknad.addEventListener("click", () => {
-    checkBoxStat(cbArray)
-    if (kontaktInfo_navn.value == "" || kontaktInfo_tlf.value == ""){
-        alert("Fyll ut kontaktinformasjonen før du sender inn søknad")
-    }
-    else { 
-        if (returnList.length < 1 ){
-            console.log("tom") 
-        }
-        else {
+frm_kontaktInfo.onsubmit = (e) => {
+    e.preventDefault()
+       let a = checkBoxStat(cbArray);
+       if (a=="Du har ikke søkt noen bolig"){
+        oppe.innerHTML = ""
+         
+        nede.innerHTML += "<br><br>"
+        nede.innerHTML += `Du vil få melding på nummeret: ${kontaktInfo_tlf.value} ` 
+        lagKnapp()
+       } 
+
+       else {
+
+            kontaktInfo_div.innerHTML = ""
             oppe.innerHTML = ""
-            nede.innerHTML = `Du har nå sendt søknad om ${returnList} ` }
-            nede.innerHTML += "<br>"
+            nede.innerHTML = `Du har nå sendt søknad om ${a} ` 
+            nede.innerHTML += "<br><br>"
             nede.innerHTML += `Du vil få melding på nummeret: ${kontaktInfo_tlf.value} `            
-    }
-})
 
+        } 
+    }

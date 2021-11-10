@@ -14,6 +14,7 @@ body{
     overflow: hidden;
     position: sticky;
     top: 0;
+
 }
 
 .navbar_outer{
@@ -145,10 +146,10 @@ body {
   flex-direction: row;
   width: 85%;
   max-height: 250px;
-
   background-color: #f2f2f2;
   border: solid black 1px;
   margin-bottom: 2%;
+  font-size: 1.5vw;
   
 }
 
@@ -180,9 +181,9 @@ body {
   margin-right: 10%;
   margin-left: 10%;
   /* max-width: 50%; */
-  object-fit: contain;
-  width: 250px;
-  height: 230px;
+  width: 80%;
+  height: 100%;
+
 }
 
 .navbar_inner_img img{
@@ -428,9 +429,9 @@ hentet: 27.oktober*/
 
 @media only screen and (max-width: 600px) {
   .content {
-    
     width: 100%;
     margin-left: 0;
+    flex-direction: column;
   }
   .input {
     width: 130px;
@@ -723,6 +724,11 @@ input[type="submit"]:hover{
   position: relative;
   background-color: dodgerblue;
   width: 100%;
+}
+
+#kontaktInfo_div fieldset {
+  margin-left: -25%;
+  width: 103%;
 }
 
 @media only screen and (max-width: 600px) {
