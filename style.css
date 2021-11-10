@@ -225,6 +225,7 @@ body {
 }
 
 #food #left{
+    border: 2px solid black;
     width: 50%;
     min-height: 100%;
 }
@@ -235,8 +236,9 @@ body {
 }
 
 #food #right{
-    min-height: 100%;
-    width: 50%;
+  border: 2px solid black;
+  min-height: 100%;
+  width: 50%;
 }
 
 #food #right img{
@@ -345,26 +347,16 @@ hentet: 27.oktober*/
     width: 100%;
 }
 
-
-  
-
-
 #frivilligFlexWrapper{
   display: flex;
   flex-direction: row;
   width: 100%;
   background-color: #f2f2f2;
   padding: 1%;
+
+}
   
-  
-  
-  }
-  
-  
-  
-  
-  
-  #bildeDiv{
+#bildeDiv{
   
   
   min-width:100%;
