@@ -207,7 +207,7 @@ const nede = document.getElementById("nede")
 const kontaktInfo_div = document.getElementById("kontaktInfo_div")
 const kontaktInfo_navn = document.getElementById("kontaktInfo_navn")
 const kontaktInfo_tlf = document.getElementById("kontaktInfo_tlf")
-
+const feilMelding_div = document.getElementById("feilMelding_div")
 
 
 let filtered_houses = []
@@ -351,11 +351,12 @@ form_div.addEventListener("input", (e) => {
     nede.innerHTML = ""
     presentHouses(filterHouses)
     if (filtered_houses.length < 1){
-        kontaktInfo_div.innerHTML = "Ingen boliger oppfyller kravet til antall personer du har skrevet inn"
+        feilMelding_div.innerHTML = "Ingen boliger oppfyller kravet til antall personer du har skrevet inn"
     }
     else {
-        kontaktInfo_div.innerHTML = ""
+        feilMelding_div.innerHTML = ""
     }
+
 }) 
 
 // Her lager vi en funksjon som lager en knapp og, og som i tillegg får en eventlistener. Denne koden kjøres
@@ -415,7 +416,7 @@ frm_kontaktInfo.onsubmit = (e) => {
 
        else {
 
-            kontaktInfo_div.innerHTML = ""
+            // kontaktInfo_div.innerHTML = ""
             oppe.innerHTML = ""
             nede.innerHTML = `Du har nå sendt søknad om ${a} ` 
             nede.innerHTML += "<br><br>"
