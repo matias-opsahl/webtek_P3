@@ -248,9 +248,11 @@ body {
 }
 
 #food #left{
-    border: 2px solid black;
     width: 50%;
     min-height: 100%;
+    background-color: white;
+    margin: 5px;
+    border: 2px solid darkgrey;
 }
 
 #food #left img{
@@ -265,14 +267,28 @@ body {
 }
 
 #food #right{
-  border: 2px solid black;
   min-height: 100%;
   width: 50%;
+  background-color: white;
+  margin: 5px;
+  border: 2px solid darkgrey;
+  
 }
 
 #food #right img{
     min-height: 100%;
     width: 100%;
+}
+
+#food #right img:hover{
+  box-shadow: 0 0 10px 5px black; 
+  cursor: pointer;
+}
+
+#food #left img:hover{
+  box-shadow: 0 0 10px 5px black; 
+  cursor:pointer;
+  
 }
 
 .om_oss img {
@@ -827,3 +843,4 @@ input[type="submit"]:hover{
       padding-bottom: 15%;
   }
 }
+
