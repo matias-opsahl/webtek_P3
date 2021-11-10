@@ -277,6 +277,13 @@ function presentHouses(func_param){
         
         const kvm = document.createElement("li")
         kvm.className = "listItemClass"
+
+        const listeDiv = document.createElement('div');
+        listeDiv.className ='listeDivR';
+        const bildeDivRammede = document.createElement('div');
+        bildeDivRammede.className='bildeDivR';
+        const checkBoxDiv = document.createElement('div');
+        checkBoxDiv.className = 'checkBoxDivR';
         
         // lager nye variabler som vi putter dataen fra bolig-arrayen inn i. 
         const by_data = document.createTextNode(`By: ${filtered_houses[i].by}`)
@@ -293,7 +300,7 @@ function presentHouses(func_param){
         img.className = "husBilder"
         img.src = "../img/bilder_i_byer/" + filtered_houses[i].img
         img.alt = filtered_houses[i].img
-        li_img.appendChild(img)
+        
 
         // Her putter vi data variabelene inn i li-elementene vi lagde ovenfor. 
         by.appendChild(by_data)
@@ -311,10 +318,15 @@ function presentHouses(func_param){
         ul.appendChild(bad)
         ul.appendChild(kvm)
 
+        //putter ul inn i listeDiv
+        listeDiv.appendChild(ul);
+        bildeDivRammede.appendChild(img)
+        checkBoxDiv.appendChild(checkBox);
+
         // Deretter putter vi li-bilde elementet + ul lista og checkboxen inn i content diven.
-        content.appendChild(li_img)
-        content.appendChild(ul)
-        content.appendChild(checkBox)
+        content.appendChild(bildeDivRammede);
+        content.appendChild(listeDiv);
+        content.appendChild(checkBoxDiv);
         content.style.backgroundColor="white"
         // Tilslutt putter vi content inn i nede div-elementet. 
         nede.appendChild(content)
