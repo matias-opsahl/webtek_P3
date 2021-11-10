@@ -594,6 +594,10 @@ margin-top: 3%;
   margin-top: 10%;
 }
 
+.kontakt_oss fieldset{
+  border-radius: 4%;
+}
+
 
 .kontakt_oss{
   display: flex;
@@ -618,6 +622,18 @@ margin-top: 3%;
   padding: 25px 15px;
   width: 40%;
   cursor: alias;
+}
+
+.qNa2:after{
+  content: '\02795'; /*Legger inn pluss tegn */
+  font-size: 40%;
+  color: black;
+  float: right;
+  margin-top: 10%;
+}
+
+.active:after{
+  content: '\2796';
 }
 
 .qNaBody {
