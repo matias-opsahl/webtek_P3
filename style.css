@@ -544,18 +544,65 @@ hentet: 27.oktober*/
     }
 }    
 
+#frm{
+margin-left: 15%;
+}
+
+#frm>input{
 
 
+
+  width: 100%;
+  height: 25px;
+  margin-bottom: 15%;
+  margin-top: 5%;
+}
+#frm>label{
+
+  margin-bottom: 5%;
+}
+
+#frm>button:hover{
+
+background-color: #d3d3d3;
+
+
+
+}
+#frm>button{
+  width: 60%;
+}
+
+#mld{
+
+margin-top: 5%;
+width: 100%;
+height:20%;
+
+}
+
+.kontakt_oss {
+
+margin-top: 3%;
+
+}
+
+#qNa1{
+
+  margin-top: 10%;
+}
 
 
 .kontakt_oss{
   display: flex;
   flex-direction: row;
   width: 100%;
+  margin-bottom: 15%;
 }
 
 .QnA{
   width: 50%;
+  margin-left:10%;
 }
 
 .Spm{
@@ -587,6 +634,9 @@ hentet: 27.oktober*/
 
 label {
   width: 100%;
+}
+#form_div{
+  display: flex;
 }
 
 form {
@@ -674,6 +724,7 @@ input[type="submit"]:hover{
 
   .QnA{
     width: 100%;
+    margin-left: 0;
   }
 
   .Spm{
@@ -684,6 +735,13 @@ input[type="submit"]:hover{
   form{
     text-align: center;
     padding-left: 0;
+  }
+
+  #frm{
+    
+    margin-top: 10%;
+    margin-left: 35%;
+    margin-bottom: 15%;
   }
 
 }
