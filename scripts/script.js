@@ -73,7 +73,7 @@ const rammede_a = document.createElement('a')
 rammede_a.setAttribute('href', 'rammede.html')
 
 const rammede_p = document.createElement('p')
-const rammede_tekst = document.createTextNode('Rammede')
+const rammede_tekst = document.createTextNode('Finn bolig')
 
 // appender tekst til p, p til a, a til inner, inner til outer, outer til navbar
 rammede_p.appendChild(rammede_tekst)
@@ -87,7 +87,7 @@ const frivillige_a = document.createElement('a')
 frivillige_a.setAttribute('href', 'frivillige.html')
 
 const frivillige_p = document.createElement('p')
-const frivillige_tekst = document.createTextNode('Frivillige')
+const frivillige_tekst = document.createTextNode('Lån ut bolig')
 
 // appender tekst til p, p til a, a til inner, inner til outer, outer til navbar
 frivillige_p.appendChild(frivillige_tekst)

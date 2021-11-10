@@ -81,53 +81,10 @@ body{
     color: #2C3137;
 }
 
-
-#food{
-    background-color: #f2f2f2
-}
-
-@media only screen and (max-width: 600px) {
-    #navbar{
-        flex-direction: column;
-        position: relative;
-    }
-
-    .navbar_outer{
-        width: 80%;
-        margin-left: 5%;
-        padding: 20px;
-    }
-
-    .navbar_inner{
-        width: 100%;
-        height: 100%;
-    }
-
-    .navbar_outer_img{
-        visibility: hidden;
-    }
-
-    p{
-        margin-bottom: 0;
-        padding-bottom: 15%;
-    }
-}
-
 body{
     margin: 0;
     font-size: 20px;
     font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-#navbar{
-    background-color: #2C3137;
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
-    margin-bottom: 10px;
-    overflow: hidden;
-    position: sticky;
-    top: 0;
 }
 
 .navbar_outer{
@@ -138,14 +95,16 @@ body{
 
 .navbar_outer_img{
     margin: 1%;
-    width: 10%;
+    width: 6%;
     overflow: hidden;
 }
 
 .navbar_inner{
     overflow: hidden;
     height: 60px;
-    color: #D3D3D3;}
+    color: #D3D3D3;
+  }
+
 body {
   margin: 0;
   padding: 0;
@@ -465,7 +424,7 @@ hentet: 27.oktober*/
     margin-bottom: 5%;
     background-color: white;
     border: solid black 1px;
-    
+    overflow: hidden;    
     height: 35px;
     border-radius: 20px;
     width: 20%;
@@ -545,18 +504,70 @@ hentet: 27.oktober*/
     }
 }    
 
+#frm{
+margin-left: 15%;
+}
+
+#frm>input{
 
 
+
+  width: 100%;
+  height: 25px;
+  margin-bottom: 15%;
+  margin-top: 5%;
+}
+#frm>label{
+
+  margin-bottom: 5%;
+}
+
+#frm>button:hover{
+
+background-color: #d3d3d3;
+
+
+
+}
+#frm>button{
+  width: 60%;
+}
+
+#mld{
+
+margin-top: 5%;
+width: 100%;
+height:20%;
+
+}
+
+.kontakt_oss {
+
+margin-top: 3%;
+
+}
+
+#qNa1{
+
+  margin-top: 10%;
+}
+
+.kontakt_oss fieldset{
+  background-color: white;
+  border-radius: 4%;
+}
 
 
 .kontakt_oss{
   display: flex;
   flex-direction: row;
   width: 100%;
+  margin-bottom: 15%;
 }
 
 .QnA{
   width: 50%;
+  margin-left:10%;
 }
 
 .Spm{
@@ -570,6 +581,19 @@ hentet: 27.oktober*/
   padding: 25px 15px;
   width: 40%;
   cursor: alias;
+}
+
+.qNa2:after{
+  content: '\254B'; /*Legger inn pluss tegn */
+  font-size: 50%;
+  color: black;
+  float: right;
+  margin-top: 10%;
+}
+
+.active:after{
+  /* Legger til minus tegn */
+  content: '\2501'; 
 }
 
 .qNaBody {
@@ -588,6 +612,9 @@ hentet: 27.oktober*/
 
 label {
   width: 100%;
+}
+#form_div{
+  display: flex;
 }
 
 form {
@@ -675,6 +702,7 @@ input[type="submit"]:hover{
 
   .QnA{
     width: 100%;
+    margin-left: 0;
   }
 
   .Spm{
@@ -685,6 +713,13 @@ input[type="submit"]:hover{
   form{
     text-align: center;
     padding-left: 0;
+  }
+
+  #frm{
+    
+    margin-top: 10%;
+    margin-left: 35%;
+    margin-bottom: 15%;
   }
 
 }
@@ -702,4 +737,31 @@ input[type="submit"]:hover{
 #kontaktInfo_div fieldset {
   margin-left: -25%;
   width: 103%;
+}
+
+@media only screen and (max-width: 600px) {
+  #navbar{
+      flex-direction: column;
+      position: relative;
+  }
+
+  .navbar_outer{
+      width: 80%;
+      margin-left: 5%;
+      padding: 20px;
+  }
+
+  .navbar_inner{
+      width: 100%;
+      height: 100%;
+  }
+
+  .navbar_outer_img{
+      visibility: hidden;
+  }
+
+  p{
+      margin-bottom: 0;
+      padding-bottom: 15%;
+  }
 }

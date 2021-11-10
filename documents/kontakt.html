@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
     <link rel="stylesheet" href="../style.css">
     <title>Kontakt oss</title>
 </head>
@@ -12,56 +13,61 @@
     <div id="food">
         <div class="kontakt_oss">
             <div class="QnA">
-                
-                <h2>Ofte stilte spørsmål</h2>
-                
-                <div class="qNa1">                
-                    <h3 class="qNa2">Hvordan kan jeg hjelpe?</h3>                
-                    <div class="qNaBody">
-                        <p>For å være med å bidra i den felles dugnaden kan du registrere boligen din hvis du trykker på "Frivillige" i navigasjonsbaren på toppen av siden.</p>
-                     </div>
-                </div>
-                
-                <hr class="hr-strek">
-                
-                <div class="qNa3">
-                    <h3 class="qNa2">Hvor finner jeg tilgjengelige boliger?</h3>
-                    <div class="qNaBody">
-                        <p>Boligene som er tilgjengelige for rammede finner du hvis du trykker på "Rammede" i navigasjonsbaren på toppen av siden.</p>
-                    </div>
-                </div>
-
-                <hr class="hr-strek">
-
-                <div class="qNa4">
-                    <h3 class="qNa2">I hvilke landsdeler tilbyr dere boliger?</h3>
+                <fieldset>
+                    <legend>Ofte stilte spørsmål</legend>
+                    
+                    <div class="qNa1">                
+                        <h3 class="qNa2">Hvordan kan jeg hjelpe?</h3>                
                         <div class="qNaBody">
-                            <p>Vi har tilgjengelige boliger i Oslo, Trondheim, Fredrikstad, Kristiansand, Bergen, Molde og Tromsø</p>
+                            <p>For å være med å bidra i den felles dugnaden kan du registrere boligen din hvis du trykker på "Lån ut bolig" i navigasjonsbaren på toppen av siden.</p>
                         </div>
                     </div>
+                    
+                    <hr class="hr-strek">
+                    
+                    <div class="qNa3">
+                        <h3 class="qNa2">Hvor finner jeg tilgjengelige boliger?</h3>
+                        <div class="qNaBody">
+                            <p>Boligene som er tilgjengelige for de som har mistet boligen sin, finner du hvis du trykker på "Finn bolig" i navigasjonsbaren på toppen av siden.</p>
+                        </div>
+                    </div>
+
+                    <hr class="hr-strek">
+
+                    <div class="qNa4">
+                        <h3 class="qNa2">I hvilke landsdeler tilbyr dere boliger?</h3>
+                            <div class="qNaBody">
+                                <p>Vi har tilgjengelige boliger i Oslo, Trondheim, Fredrikstad, Kristiansand, Bergen, Molde og Tromsø</p>
+                            </div>
+                        </div>
+                </fieldset>
                 
             </div>
             <div class="Spm">
-                <h2>Kontakt oss</h2>
+                
                 <div id="form_div">
+                    
                     <form id="frm">
-                        <label for="navn">Navn</label>
-                        <br>
-                        <input type="text" id="navn" placeholder="Fullt navn" required>
-                        <br>
-                        <label for="epost">E-post</label>
-                        <br>
-                        <input type="email" id="epost" placeholder="E-post" required>
-                        <br>
-                        <label for="emne">Emne</label>
-                        <br>
-                        <input type="text" id="emne" placeholder="Emne" required>
-                        <br>
-                        <label for="mld">Skriv din melding her:</label>
-                        <br>
-                        <input type="text" id="mld" placeholder="Melding" required>
-                        <br><br>
-                        <button type="submit">Send inn</button>
+                        <fieldset>
+                            <legend>Kontakt oss</legend>
+                            <label for="navn">Navn:</label>
+                            <br>
+                            <input type="text" id="navn" placeholder="Fullt navn" required>
+                            <br>
+                            <label for="epost">E-post:</label>
+                            <br>
+                            <input type="email" id="epost" placeholder="E-post" required>
+                            <br>
+                            <label for="emne">Emne:</label>
+                            <br>
+                            <input type="text" id="emne" placeholder="Emne" required>
+                            <br>
+                            <label for="mld">Skriv din melding her:</label>
+                            <br>
+                            <textarea  id="mld" placeholder="Melding" required></textarea>
+                            <br><br>
+                            <button type="submit">Send inn:</button>
+                        </fieldset>
                     </form>
                 </div>
             </div>
