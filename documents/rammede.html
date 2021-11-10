@@ -14,7 +14,7 @@
             <div id='wrapper'>
                <div id= 'filterWrapper'>
                    <h3 id='filtrerOverskrift'>Filtrer boliger</h3>
-                   <div id= form>
+                   <div id= form_div>
                        <form id="frm">
        
                            <label for="inBy"> Nærmeste by:
@@ -36,19 +36,7 @@
                             </label>
                             <hr>
                             <br>
-                            <div id="kontaktInfo">
-                                <h3>Kontakt
-                                    informasjon</h3>
-                                <label> Ditt navn:
-                                    <input type='text' class='input' id="kontaktInfo_navn" required>
-                                </label>
-        
-                                <label> Telefon nummer:
-                                    <input type="number"  name="inputNumber" class="input" id="kontaktInfo_tlf" min='10000000' max = '99999999' maxlength="8" oninvalid="this.setCustomValidity('Må være 8 siffer, kun tall!')" oninput="this.setCustomValidity('')" required=''>
-                                </label>
-                            </div>
-                            <br>
-                           <input type='submit' id="submit" value="søk etter boliger">
+                           <!-- <input type='submit' id="submit" value="søk etter boliger"> -->
                        </form>
                    </div>
                </div>
@@ -56,12 +44,31 @@
                
                 <div id = 'contentWrapper'>
                    <div id="oppe">
-                    <h2 id='tilgjengligHead'> Tilgjengelige boliger</h2>
-                    <button id="send_bolig_knapp"> Send inn søknad </button>
-                    <br/>
-                    <br/>
+                    <h2 id='tilgjengligHead'> Tilgjengelige boliger</h2>                   
                    </div>
-                   <div id="nede"></div>
+
+                <div id="nede"> </div>
+                <div id="kontaktInfo_div">
+                    <form id="frm_kontaktInfo">
+                        <fieldset>
+                            <legend>
+                                <h3>KontaktInformasjon</h3>
+                            </legend>
+
+                            <label> Ditt navn:
+                                <input type='text' class='input' id="kontaktInfo_navn" required>
+                            </label>
+                            
+                            <label> Telefon nr:
+                                <input type="number"  name="inputNumber" class="input" id="kontaktInfo_tlf" min='10000000' max = '99999999' maxlength="8" oninvalid="this.setCustomValidity('Må være 8 siffer, kun tall!')" oninput="this.setCustomValidity('')" required=''>
+                            </label>
+                            
+                            <input type="submit" id="submit" value="Send inn søknad"/>
+                        </fieldset>
+                    </form>
+                    <br>
+                    <br>
+                </div>
                 </div>
                 
             </div>
