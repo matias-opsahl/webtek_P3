@@ -137,14 +137,16 @@ body{
 
 .navbar_outer_img{
     margin: 1%;
-    width: 10%;
+    width: 6%;
     overflow: hidden;
 }
 
 .navbar_inner{
     overflow: hidden;
     height: 60px;
-    color: #D3D3D3;}
+    color: #D3D3D3;
+  }
+
 body {
   margin: 0;
   padding: 0;
