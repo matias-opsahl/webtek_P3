@@ -10,37 +10,40 @@
 </head>
 <body>  
     <div id="navbar"></div> <!-- Ikke rør -->
-    <div id="food">
-        <div id='masterWrapper'>
-            <div id='wrapper'>
-               <div id= 'filterWrapper'>
-                   <h3 id='filtrerOverskrift'>Filtrer boliger</h3>
-                   <div id= form_divR>
-                       <form id="frmR">
-       
-                           <label for="inBy"> Nærmeste by:
-                           <select id="dropDown">
 
-                               <option value="Oslo">Oslo</option>
-                               <option value="Bergen">Bergen</option>
-                               <option value="Trondheim">Trondheim</option>
-                               <option value="Kristiansand">Kristiansand</option>
-                               <option value="Molde">Molde</option>
-                               <option value="Fredrikstad">Fredrikstad</option>
-                               <option value="Tromsø">Tromsø</option>
-                           </select>
-                           </label>
-                           <br>
-                           <br>
-                           <label for ='inPersoner'> Antall personer:
-                           <input type='number' min="1" class='input' id='inPersoner' name = 'inPersoner' required>
-                            </label>
-                            <hr>
-                            <br>
-                           <!-- <input type='submit' id="submit" value="søk etter boliger"> -->
-                       </form>
-                   </div>
-               </div>
+<!-- her er food diven vår. I denne får legger vi inn all unik data for hver side  -->
+    <div id="food">
+        <!--  -->
+        <div id= 'filterWrapper'>
+            <h3 id='filtrerOverskrift'>Filtrer boliger</h3>
+            <div id= form_divR>
+                <form id="frmR">
+                    <label for="inBy"> Nærmeste by:
+
+                    <select id="dropDown">
+                        <option value="Oslo">Oslo</option>
+                        <option value="Bergen">Bergen</option>
+                        <option value="Trondheim">Trondheim</option>
+                        <option value="Kristiansand">Kristiansand</option>
+                        <option value="Molde">Molde</option>
+                        <option value="Fredrikstad">Fredrikstad</option>
+                        <option value="Tromsø">Tromsø</option>
+                    </select>
+
+                    </label>
+
+                        <br>
+                        <br>
+                        
+                    <label for ='inPersoner'> Antall personer:
+                    <input type='number' min="1" class='input' id='inPersoner' name = 'inPersoner' required>
+                    </label>
+
+                        <hr>
+                        <br>
+                </form>
+            </div>
+        </div>
                
                
                 <div id = 'contentWrapper'>
@@ -85,8 +88,8 @@
                 </div>
                 </div>
                 
-            </div>
-        </div>
+            
+        
     </div> <!-- Legg ting inn her -->
     <div id="footer"></div> <!-- Ikke rør -->
     <script src="../scripts/script.js"></script> <!-- Ikke rør -->

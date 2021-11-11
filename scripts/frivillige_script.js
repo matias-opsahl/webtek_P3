@@ -26,7 +26,7 @@ function formValid(event){// fyres av ved submit, og lagrer verdier fra input.
     let inn = document.getElementById('formWrap');
     inn.innerHTML=''// fjerner formet
     
-    let b =  'boligen din ' +bolig+' er nå lagt ut til utlån.'// streng til textnoden melding
+    let b =  'Boligen din ' +bolig+' er nå lagt ut til utlån.'// streng til textnoden melding
     let melding = document.createTextNode(b);
     let overText = document.createTextNode('Takk for ditt bidrag, '+navn+'!')//skriver ut overskrift på tilbakemelding
     let overskrift = document.createElement('h2');
