@@ -465,105 +465,22 @@ hentet: 27.oktober*/
     color: white;
   }
 
+
   #formWrap #knapp {
-    background-color: black;
-    color: white;
-    border: none;
     height: 35px;
-    width: 100px;
+    width: 25%;
     border-radius: 20px;
     font-size: 80%;
-    margin-top: 0;
+    margin-left: -10%;
+    margin-left: 38%;
 
   }
 
   .checkBoxDivR>input{
-
     margin-top: 150%;
     margin-right:100%;
   }
 
-  
-
-/* @media only screen and (max-width: 600px) { */
-  /* .content {
-    width: 100%;
-    margin-left: 0;
-    
-  }
-  .input {
-    width: 130px;
-  }
-  #filtrerOverskrift{
-      display: none;
-  }
-
-  .listClass{
-
-    margin-left:5%;
-    padding: 0;
-  }
-
-  #wrapper {
-    flex-direction: column;
-  }
-
-  .listItemClass {
-    font-size: 3vw;
-    text-align: left;
-    list-style-type: none;
-    margin-bottom: 2%;
-  }
-
-  .listClass>h3{
-
-    margin-bottom: 1%;
-    font-size: 3vw;
-  }
-  
-
-  label {
-    display: default;
-    margin-bottom: 2%;
-  }
-  input {
-    display: default;
-  }
-  #contentWrapper {
-    padding: 0;
-    width: 100%;
-  }
-  #masterWrapper {
-    width: 100%;
-  }
-  .checkBoxClass{
-
-    height: 15px;
-    width: 15px;
-    
-  }
-
-    .navbar_inner p {
-
-        font-size: 40px;
-    }
-    #frivilligFlexWrapper{
-      flex-direction: column !important;
-          
-    }
-    #formWrap>form>label{
-      text-align: center !important;
-      font-size: 5vw !important;
-    }
-    #formWrap>form{
-      margin-left: 0 !important;
-      text-align: right !important;
-    }
-    .opplastetBilde{
-      margin-left : 5%;
-    }
-
-}     */
 
 
 #frm>input{
