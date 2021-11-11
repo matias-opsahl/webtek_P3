@@ -298,7 +298,7 @@ function presentHouses(func_param){
         const by_data = document.createTextNode(`By: ${filtered_houses[i].by}`)
         const adresse_data = document.createTextNode(filtered_houses[i].adresse)
         const antall_personer_data = document.createTextNode(`${filtered_houses[i].antall_personer} sengeplasser`)
-        const bolig_type_data = document.createTextNode(`boligtype: ${filtered_houses[i].bolig_type}`)
+        const bolig_type_data = document.createTextNode(`Boligtype: ${filtered_houses[i].bolig_type}`)
         const bad_data = document.createTextNode(`Antall bad: ${filtered_houses[i].bad}`)
         const kvm_data = document.createTextNode(filtered_houses[i].kvm)
 
