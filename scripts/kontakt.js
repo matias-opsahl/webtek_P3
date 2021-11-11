@@ -14,7 +14,7 @@ frm.onsubmit = (e) => {
     const fieldset = document.createElement("fieldset")
     const legend = document.createElement("legend")
     const tilbakemld = document.createTextNode("Tilbakemelding")
-    const data = document.createTextNode(`Hei ${navn.value}! Meldingen din er motatt. Du vil få svar på ${epost.value}`)
+    const data = document.createTextNode(`Hei ${navn.value}! Meldingen din er mottatt. Du vil få svar på ${epost.value}`)
     const br = document.createElement("br")
     legend.appendChild(tilbakemld)
     fieldset.appendChild(legend)
