@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" type="image/x-icon" href="../img/favicon.ico" alt="favicon">
+        <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
         <link rel="stylesheet" href="../style.css" />
         <title>Frivillige</title>
     </head>
@@ -18,20 +18,20 @@
                     <form id="frivilligForm" onsubmit="formValid(event)"><!-- kalles opp når bruker har skrevet gyldige data i formen-->
                         <label for="inputNavn">
                             Fullt navn:
-                            <input type="text" name="inputNavn" id="inputNavn" required pattern = '[a-zA-Zæ,ø,å, ]+' title = 'kun bokstaver og mellomrom godtas!' required>
+                            <input type="text" name="inputNavn" id="inputNavn" required pattern = '[a-zA-Zæ,ø,å, ]+' title = 'kun bokstaver og mellomrom godtas!'>
                         </label>
 
                         <br>
 
                         <label for="inputNumber">
                             Telefonnummer:
-                            <input type="number"  name="inputNumber" id="inputNumber" min='10000000' max = '99999999' maxlength="8" oninvalid="this.setCustomValidity('Må være 8 siffer, kun tall!')" oninput="this.setCustomValidity('')" required=''> <!-- Krever nøyaktig 8 siffer. setter det som feedback, og tømmer den tilbakemeldingen som er default-->
+                            <input type="number"  name="inputNumber" id="inputNumber" min='10000000' max = '99999999' oninvalid="this.setCustomValidity('Må være 8 siffer, kun tall!')" oninput="this.setCustomValidity('')" required=''> <!-- Krever nøyaktig 8 siffer. setter det som feedback, og tømmer den tilbakemeldingen som er default-->
                         </label>
 
                         <br>
 
                         <label for="inputBy"> By:
-                            <input type="text" name="inputBy" id="inputBy" required pattern = '[a-zA-Zæ,ø,å, ]+' title = 'kun bokstaver og mellomrom godtas!' required><!-- input by, kun bokstaver-->
+                            <input type="text" name="inputBy" id="inputBy" required pattern = '[a-zA-Zæ,ø,å, ]+' title = 'kun bokstaver og mellomrom godtas!'><!-- input by, kun bokstaver-->
                         </label><br>
 
                         <label for="inputAdr">
@@ -43,7 +43,7 @@
 
                         <label for="inputSoveplasser">
                             Antall soveplasser:
-                            <input type="number" name="inputSoveplasser" id="inputSoveplasser"  min='1' title = 'angi et gyldig antall soverom!'required >
+                            <input type="number" name="inputSoveplasser" id="inputSoveplasser"  min='1' title = 'angi et gyldig antall soverom!' required >
                         </label
                         
                         ><br>
@@ -55,9 +55,9 @@
                         
                         <br>
 
-                        <label for="inBilde">
+                        <label for="fileUpload">
                             Last opp et bilde:
-                            <input type="file" id="fileUpload"  name="fileUpload" accept="image/*" onchange="visBilde(event)"  title = 'last opp et bilde av boligen!' required='true'><!-- onchange funksjonen, kaller en js funksjon som legger bildet inn i dokumentet-->
+                            <input type="file" id="fileUpload"  name="fileUpload" accept="image/*" onchange="visBilde(event)"  title = 'last opp et bilde av boligen!'> <!-- onchange funksjonen, kaller en js funksjon som legger bildet inn i dokumentet-->
                         </label>
                         
                         <br>

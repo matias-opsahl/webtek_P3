@@ -660,14 +660,6 @@ input[type="submit"]:hover{
     font-size: 3vw;
   }
   
-
-  label {
-    display: default;
-    margin-bottom: 2%;
-  }
-  input {
-    display: default;
-  }
   #contentWrapper {
     padding: 0;
     width: 100%;
