@@ -438,9 +438,6 @@ hentet: 27.oktober*/
     margin-left: 15%;
   }
   
-  #formWrap .laanUt_knapp {
-    background-color: red;
-  }
 
   .opplastetBilde{
   
@@ -460,6 +457,7 @@ hentet: 27.oktober*/
     height: 35px;
     border-radius: 20px;
     width: 25%;
+    font-size: 80%;
   }
   
   #btnLastOpp:hover{
@@ -467,11 +465,24 @@ hentet: 27.oktober*/
     color: white;
   }
 
+  #formWrap #knapp {
+    background-color: black;
+    color: white;
+    border: none;
+    height: 35px;
+    width: 100px;
+    border-radius: 20px;
+    font-size: 80%;
+    margin-top: 0;
+
+  }
+
   .checkBoxDivR>input{
 
     margin-top: 150%;
     margin-right:100%;
   }
+
   
 
 /* @media only screen and (max-width: 600px) { */
@@ -671,12 +682,6 @@ input{
   margin-bottom: 10px;
 }
 
-button{
-  height: 35px;
-  width: 100px;
-  border-radius: 20px;
-  font-size: 80%;
-}
 
 #oppe button {
   width: 15%;
@@ -799,6 +804,10 @@ input[type="submit"]:hover{
   background-color: black;
   color: white;
   border: none;
+  height: 35px;
+  width: 100px;
+  border-radius: 20px;
+  font-size: 80%;
 }
 
 #kontakt_btn:hover {
@@ -918,8 +927,9 @@ input[type="submit"]:hover{
       margin: auto;
     }
     
-    #formWrap #btnLastOpp {
+    #btnLastOpp {
       margin-right: 35%;
+      font-size: 80%;
     }
 
     #form_div {
