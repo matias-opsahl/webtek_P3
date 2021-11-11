@@ -2,7 +2,6 @@
 
 function visBilde(e){//kalles opp som onchange event på filopplastnings input. legger inn bildet i dokumentet
 
-console.log('viser bilde!');
 let fil = e.target.files//henter ut fra input.
 let image=document.createElement('img')//oppretter bildeelement
 image.src =URL.createObjectURL(fil[0])//oppretter en url og setter den til egenskapen src på bildet.
@@ -10,9 +9,6 @@ image.className='opplastetBilde';
 let innSti = document.getElementById('bildeDiv')
 innSti.innerHTML='';//tømmer bilde diven før den legger inn( dersom bruker skulle bytte ut opplastet bilde)
 innSti.appendChild(image);//legger bildet inn i html dokumentet
-
-
-
 
 }
 
