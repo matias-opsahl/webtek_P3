@@ -8,19 +8,23 @@
     <link rel="stylesheet" href="../style.css">
     <title>Rammede</title>
 </head>
+
 <body>  
     <div id="navbar"></div> <!-- Ikke rør -->
     <div id="food">
+        <!-- Her lager vi div elementer som hjelper oss å håndtere media quieries og flex-styling -->
         <div id='masterWrapper'>
             <div id='wrapper'>
                <div id= 'filterWrapper'>
                    <h3 id='filtrerOverskrift'>Filtrer boliger</h3>
+                   
+                   <!-- Her lager vi formen for å filtrere bolig søk -->
                    <div id= form_divR>
                        <form id="frmR">
        
+                    <!-- Her er dropdown listen -->
                            <label for="inBy"> Nærmeste by:
                            <select id="dropDown">
-
                                <option value="Oslo">Oslo</option>
                                <option value="Bergen">Bergen</option>
                                <option value="Trondheim">Trondheim</option>
@@ -32,6 +36,7 @@
                            </label>
                            <br>
                            <br>
+                    <!-- Her er antall person inputten -->
                            <label for ='inPersoner'> Antall personer:
                            <input type='number' min="1" class='input' id='inPersoner' name = 'inPersoner' required>
                             </label>
@@ -42,7 +47,7 @@
                    </div>
                </div>
                
-               
+               <!-- Denne rommer alt "innholdet", alle boligene. -->
                 <div id = 'contentWrapper'>
                    <div id="oppe">
                     <h2 id='tilgjengligHead'> Tilgjengelige boliger </h2>
@@ -60,29 +65,30 @@
                 <br>
                 <div id="nede"> </div>
                 <br>
-                <div id="kontaktInfo_div">
-                    <form id="frm_kontaktInfo">
-                        <fieldset>
-                            <legend>
-                                <h3>Kontakt Informasjon</h3>
-                            </legend>
+                    <div id="kontaktInfo_div">
+                        <!-- Her har vi formen for kontaktinformasjon som må fylles ut for å få godkjent bolig-søknaden -->
+                        <form id="frm_kontaktInfo">
+                            <fieldset>
+                                <legend>
+                                    <h3>Kontakt Informasjon</h3>
+                                </legend>
 
-                            <label> Ditt navn:
-                                <br>
-                                <input type='text' class='input' id="kontaktInfo_navn" required>
-                            </label>
-                                <br><br>
-                            <label> Telefon nr:
-                                <br>
-                                <input type="number"  name="inputNumber" class="input" id="kontaktInfo_tlf" min='10000000' max = '99999999' maxlength="8" oninvalid="this.setCustomValidity('Må være 8 siffer, kun tall!')" oninput="this.setCustomValidity('')" required=''>
-                            </label>
-                                <br><br>
-                            <input type="submit" id="submit" value="Send inn søknad"/>
-                        </fieldset>
-                    </form>
-                    <br>
-                    <br>
-                </div>
+                                <label> Ditt navn:
+                                    <br>
+                                    <input type='text' class='input' id="kontaktInfo_navn" required>
+                                </label>
+                                    <br><br>
+                                <label> Telefon nr:
+                                    <br>
+                                    <input type="number"  name="inputNumber" class="input" id="kontaktInfo_tlf" min='10000000' max = '99999999' maxlength="8" oninvalid="this.setCustomValidity('Må være 8 siffer, kun tall!')" oninput="this.setCustomValidity('')" required=''>
+                                </label>
+                                    <br><br>
+                                <input type="submit" id="submit" value="Send inn søknad"/>
+                            </fieldset>
+                        </form>
+                        <br>
+                        <br>
+                    </div>
                 </div>
                 
             </div>
