@@ -215,12 +215,20 @@ let filtered_houses = []
 function filterHouses(){
     const inBy = document.getElementById("dropDown")
     const inPersoner = document.getElementById("inPersoner")
+    let a = 1;
+    
+    if (isNaN(parseInt(inPersoner.value))){
+        a = 1;
+    }
 
+    else {
+        a = parseInt(inPersoner.value);
+    }
 // Her looper vi gjennom bolig-arrayen "databasen" og sammenligner verdiene fra input feltene mot arrayen.
 // Hvis input dataen opfyller kravene i if-statementen skal de gjeldene boligene dyttes inn i arrayen filtered_houses, som vi senere tar utgangspunkt i når vi skal filtrere søket. 
-
     for (i = 0; i<boliger.length; i++){
-        if ((inBy.value) == (boliger[i].by) && parseInt(inPersoner.value) <= boliger[i].antall_personer){
+
+        if ((inBy.value) == (boliger[i].by) && a <= boliger[i].antall_personer){
             filtered_houses.push(boliger[i])
         }
 
@@ -290,7 +298,7 @@ function presentHouses(func_param){
         const by_data = document.createTextNode(`By: ${filtered_houses[i].by}`)
         const adresse_data = document.createTextNode(filtered_houses[i].adresse)
         const antall_personer_data = document.createTextNode(`${filtered_houses[i].antall_personer} sengeplasser`)
-        const bolig_type_data = document.createTextNode(`boligtype: ${filtered_houses[i].bolig_type}`)
+        const bolig_type_data = document.createTextNode(`Boligtype: ${filtered_houses[i].bolig_type}`)
         const bad_data = document.createTextNode(`Antall bad: ${filtered_houses[i].bad}`)
         const kvm_data = document.createTextNode(filtered_houses[i].kvm)
 
@@ -350,7 +358,7 @@ form_div.addEventListener("input", (e) => {
     nede.innerHTML = ""
     presentHouses(filterHouses)
     if (filtered_houses.length < 1){
-        feilMelding_div.innerHTML = "Ingen boliger oppfyller kravet til antall personer du har skrevet inn"
+        feilMelding_div.innerHTML = `<h4 style="color:red;">Ingen boliger oppfyller kravet til antall personer du har skrevet inn</h4>`
     }
     else {
         feilMelding_div.innerHTML = ""
