@@ -7,6 +7,53 @@ body{
     flex-direction: column;
 }
 
+
+#food{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    background-color: #f2f2f2;
+}
+
+#food #left{
+  width: 50%;
+  min-height: 100%;
+  background-color: white;
+  margin: 5px;
+  border: 2px solid darkgrey;
+}
+
+#food #left img{
+  min-height: 100%;
+  width: 100%;
+}
+
+
+#food #right{
+min-height: 100%;
+width: 50%;
+background-color: white;
+margin: 5px;
+border: 2px solid darkgrey;
+
+}
+
+#food #right img{
+  min-height: 100%;
+  width: 100%;
+}
+
+#food #right img:hover{
+box-shadow: 0 0 10px 5px black; 
+cursor: pointer;
+}
+
+#food #left img:hover{
+box-shadow: 0 0 10px 5px black; 
+cursor:pointer;
+
+}
+
 #navbar{
     background-color: #2C3137;
     display: flex;
@@ -99,7 +146,7 @@ body{
   }
 
 
-/* Finn bolig */
+/* Rammede */
 
 #wrapper {
   display: flex;
@@ -110,14 +157,16 @@ body{
   height: 90%;
 }
 
-.listeDivR{width: 50%;}
+.listeDivR{
+  width: 50%;
+}
 
-.bildeDivR{width: 40%;}
+.bildeDivR{
+  width: 40%;
+}
 
 .checkBoxDivR{
 width: 10%;
-
-
 }
 
 
@@ -141,151 +190,38 @@ width: 10%;
   height: 100%;
 }
 
-
 .content {
   display: flex;
   flex-direction: row;
   width: 95%;
   max-height: 350px;
-  
   background-color: #f2f2f2;
   border: solid black 1px;
   margin-bottom: 2%;
   font-size: 1.5vw;
-  
 }
 
-
-
-.addHeader {
-  height: 15px;
+.listClass { 
+  width: 100%; 
+  margin-left: 3%; 
 }
 
-.navbar_inner_img{
-    overflow: hidden;
-    height: 60px;
-    color: #D3D3D3;}
-
-.listClass {
-  
-  width: 100%;
-  
-  margin-left: 3%;
-  
-}
 .listItemClass {
   font-size: 2vw;
   text-align: left;
   list-style-type: none;
- 
-  
   margin-bottom: 5%;
-
-
 }
 
 .listClass>h3{
-
-
   text-align: left;
   width: 100%;
 }
+
 .husBilder {
-  
-  
   width: 100%;
   height: 100%;
   object-fit: contain;
-  
-
-}
-
-.navbar_inner_img img{
-    width: 100%;
-    height: 100%;
-    display: block;
-    margin: auto;
-}
-
-
-.navbar_inner p{
-    text-align: center;
-}
-
-#navbar a{
-    text-decoration: none;
-    color: #D3D3D3;
-}
-
-#navbar p{
-    height: 100%;
-    margin-top: 0;
-    padding-top: 15%;
-}
-
-.navbar_inner:hover{
-    background-color: #D3D3D3;
-}
-
-.navbar_inner p:hover{
-    color: #2C3137;
-}
-
-#food{
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-    background-color: #f2f2f2;
-}
-
-#food #left{
-    width: 50%;
-    min-height: 100%;
-    background-color: white;
-    margin: 5px;
-    border: 2px solid darkgrey;
-}
-
-#food #left img{
-    min-height: 100%;
-    width: 100%;
-}
-
-
-#food #right{
-  min-height: 100%;
-  width: 50%;
-  background-color: white;
-  margin: 5px;
-  border: 2px solid darkgrey;
-  
-}
-
-#food #right img{
-    min-height: 100%;
-    width: 100%;
-}
-
-#food #right img:hover{
-  box-shadow: 0 0 10px 5px black; 
-  cursor: pointer;
-}
-
-#food #left img:hover{
-  box-shadow: 0 0 10px 5px black; 
-  cursor:pointer;
-  
-}
-
-.om_oss img {
-    border-radius: 50%;
-}
-
-.kolonne1 {
-    float: left;
-    margin-left: 10%;
-    width: 20%;
-    padding: 5px;
 }
 
 #contentWrapper {
@@ -296,22 +232,10 @@ width: 10%;
   background-color: #f2f2f2;
   padding:3%;
 }
-  
-.rad1::after {
-    content: "";
-    clear: both;
-    display: table;
-}
 
-#navBar {
-  width: 100%;
-  height: 12%;
-  background-color: #2c3137;
-  text-align: center;
-  color: white;
-}
 /*css en for styling av checkBox er hentet fra følgende kilde: https://www.html5canvastutorials.com/blog/2012/06/custom-form-radio-checkbox/
 hentet: 27.oktober*/
+
 .checkBoxClass {
   -webkit-appearance: none;
   background-color: #fafafa;
@@ -321,24 +245,11 @@ hentet: 27.oktober*/
   padding: 9px;
   border-radius: 3px;
   display: inline-block;
-  /* position: relative; */
   width: 30px;
   height: 30px;
 
   right: 8%;
   margin-top: 8%;
-}
-.headerOmOss {
-    text-align: center;
-}
-#omOss1 {
-    text-align: center;
-}
-
-#visjon {
-    text-align: center;
-    max-width: 33.3%;
-    margin-left: 33.3%;
 }
 
 .checkBoxClass:checked:after {
@@ -348,6 +259,128 @@ hentet: 27.oktober*/
   margin-top: -15px; 
   margin-left: -9px;
   color: #2C3137;
+}
+
+.checkBoxDivR>input{
+  margin-top: 150%;
+  margin-right:100%;
+}
+
+#oppe button {
+  width: 15%;
+  background-color: black;
+  color: white;
+  border: none;
+}
+#oppe button:hover {
+  background-color: rgb(65, 65, 65);
+  color: white;
+}
+input[type="submit"]{
+  margin: auto;
+  border: none;
+  height: 40px;
+  border-radius: 20px;
+  background-color: black;
+  color: white;
+  border: none;
+  font-size: 80%;
+  padding: 10px;
+  
+}
+
+input[type="submit"]:hover{
+  background-color: rgb(65, 65, 65);
+  color: white;
+}
+
+#dropDown{
+  width: 100%;
+}
+
+#filterWrapper #inPersoner {
+  width: 96%;
+}
+
+#finn_bolig_ul {
+  list-style: none;
+}
+
+#finn_bolig_fieldset {
+  text-align: left;
+  width: 92.1%;
+  margin-left: -0.01%;
+}
+
+#filterWrapper #dropDown {
+  width: 100%;
+}
+
+#kontaktInfo_div {
+  margin: auto;
+  width: 100%;
+}
+
+#frm_kontaktInfo_div, #kontaktinfo_navn {
+  width: 200px;
+}
+
+#frm_kontaktInfo_div, input[type="number"]{
+  width: 150px;
+}
+
+#kontaktInfo_div fieldset {
+  margin: auto;
+  width: 60%;
+}
+
+#kontakt_btn {
+  background-color: black;
+  color: white;
+  border: none;
+  height: 35px;
+  width: 100px;
+  border-radius: 20px;
+  font-size: 80%;
+}
+
+#kontakt_btn:hover {
+  background-color: rgb(65, 65, 65);
+  color: white;
+}
+
+
+
+
+
+
+/* Om oss */
+
+.om_oss img {
+  border-radius: 50%;
+}
+
+.kolonne1 {
+  float: left;
+  margin-left: 10%;
+  width: 20%;
+  padding: 5px;
+}
+
+.rad1::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+#omOss1 {
+    text-align: center;
+}
+
+#visjon {
+    text-align: center;
+    max-width: 33.3%;
+    margin-left: 33.3%;
 }
   
 .Intro {
@@ -377,6 +410,8 @@ hentet: 27.oktober*/
 .div_om_oss_visjon{
     width: 100%;
 }
+ 
+/* Frivillige */
 
 #frivilligFlexWrapper{
   display: flex;
@@ -387,92 +422,79 @@ hentet: 27.oktober*/
 
 }
 
+#bildeDiv{
+  min-width:100%;
+  margin-top:15%;
+}
+
+#opplastning{
+  text-align: left;
+  padding: 5%;
+}
   
-  #bildeDiv{
-    min-width:100%;
-    margin-top:15%;
+#formWrap{
+  display: flex;
+  flex-direction: column; 
+  min-width: 50%;
+  padding:3%
   }
 
-  #opplastning{
+#formWrap>form>label{
+  display: inline;
+  text-align: right;
+  font-size: 1.5vw;
+}
   
-    
-    text-align: left;
-    padding: 5%;
-  }
+#formWrap>form>label>input{
+  width: 40%;
+  height:7%;
+  margin-left: 4%;
+  margin-bottom: 5%;
+}
   
-
-
-  #formWrap{
-    display: flex;
-    flex-direction: column;
-    min-width: 50%;
-    padding:3%;
-  }
-  #formWrap>form>label{
-    display: inline;
-    text-align: right;
-    font-size: 1.5vw;
-    
-  }
-  #formWrap>form>label>input{
-    width: 40%;
-    height:7%;
-    margin-left: 4%;
-    margin-bottom: 5%;
-  }
-  
-  #formWrap>form{
-    
-    text-align: right;
-    
-    margin-top: 3%;
-    margin-left: 15%;
-  }
+#formWrap>form{
+  text-align: right;
+  margin-top: 3%;
+  margin-left: 15%;
+}
   
 
-  .opplastetBilde{
+.opplastetBilde{
+  width: 100%;
+  display: inline-block;
+  top:50%;
+  border:solid 1px black;
+}
   
-    width: 100%;
-    
-    display: inline-block;
-    top:50%;
-    border:solid 1px black;
-    
-  }
-  #btnLastOpp{
-    margin-bottom: 5%;
-    background-color: black;
-    color: white;
-    border: none;
-    overflow: hidden;    
-    height: 45px;
-    border-radius: 20px;
-    width: 25%;
-    font-size: 80%;
-  }
+#btnLastOpp{
+  margin-bottom: 5%;
+  background-color: black;
+  color: white;
+  border: none;
+  overflow: hidden;    
+  height: 45px;
+  border-radius: 20px;
+  width: 25%;
+  font-size: 80%;
+}
   
-  #btnLastOpp:hover{
-    background-color: rgb(65, 65, 65);
-    color: white;
-  }
+#btnLastOpp:hover{
+  background-color: rgb(65, 65, 65);
+  color: white;
+}
+
+#formWrap #knapp {
+  height: 35px;
+  width: 25%;
+  border-radius: 20px;
+  font-size: 80%;
+  margin-left: -10%;
+  margin-left: 38%;
+
+}
 
 
-  #formWrap #knapp {
-    height: 35px;
-    width: 25%;
-    border-radius: 20px;
-    font-size: 80%;
-    margin-left: -10%;
-    margin-left: 38%;
-
-  }
-
-  .checkBoxDivR>input{
-    margin-top: 150%;
-    margin-right:100%;
-  }
-
-
+/* Kontakt oss */
 
 #frm>input{
   width: 100%;
@@ -481,37 +503,22 @@ hentet: 27.oktober*/
   margin-top: 5%;
 }
 #frm>label{
-
   margin-bottom: 5%;
 }
 
 #frm>button:hover{
-
-background-color: #d3d3d3;
-
-
-
+  background-color: #d3d3d3;
 }
+
 #frm>button{
   width: 60%;
 }
 
-#mld{
-
-margin-top: 5%;
-width: 100%;
-height:20%;
-
-}
-
 .kontakt_oss {
-
-margin-top: 3%;
-
+  margin-top: 3%;
 }
 
 #qNa1{
-
   margin-top: 10%;
 }
 
@@ -573,9 +580,6 @@ margin-top: 3%;
   width: 60%;
 }
 
-label {
-  width: 100%;
-}
 #form_div{
   display: flex;
   text-align: center;
@@ -586,161 +590,7 @@ label {
   padding-left: 20%;
 } 
 
-input{
-  margin-bottom: 10px;
-}
 
-
-#oppe button {
-  width: 15%;
-  background-color: black;
-  color: white;
-  border: none;
-}
-#oppe button:hover {
-  background-color: rgb(65, 65, 65);
-  color: white;
-}
-input[type="submit"]{
-  margin: auto;
-  border: none;
-  height: 40px;
-  border-radius: 20px;
-  background-color: black;
-  color: white;
-  border: none;
-  font-size: 80%;
-  padding: 10px;
-  
-}
-
-input[type="submit"]:hover{
-  background-color: rgb(65, 65, 65);
-  color: white;
-}
-
-#dropDown{
-  width: 100%;
-}
-
-#filterWrapper #inPersoner {
-  width: 96%;
-}
-
-#finn_bolig_ul {
-  list-style: none;
-}
-
-#finn_bolig_fieldset {
-  text-align: left;
-  width: 92.1%;
-  margin-left: -0.01%;
-}
-
-@media only screen and (max-width: 800px) {
-
-
-  #navbar{
-      flex-direction: column;
-      position: relative;
-  }
-
-  .navbar_outer{
-      width: 80%;
-      margin-left: 5%;
-      padding: 20px;
-  }
-
-  .navbar_inner{
-      width: 100%;
-      height: 100%;
-  }
-
-  .navbar_outer_img{
-      visibility: hidden;
-  }
-
-  p{
-      margin-bottom: 0;
-      padding-bottom: 15%;
-  }
-
-  .navbar_inner p {
-
-      font-size: 40px;
-  }
-
-  .kontakt_oss{
-    flex-direction: column;
-  }
-
-  .QnA{
-    width: 100%;
-    margin-left: 0;
-  }
-
-  .Spm{
-    width: 100%;
-    /* text-align: center; */
-  }
-
-  form{
-    text-align: center;
-    padding-left: 0;
-  }
-
-  #frm{
-    
-    margin-top: 10%;
-    margin-left: 35%;
-    margin-bottom: 15%;
-  }
-  #filterWrapper {
-    flex-direction: row;
-    padding: 5%;
-    width: 89.6%;
-
-  }
-
-}
-
-
-#filterWrapper #dropDown {
-  width: 100%;
-}
-
-#kontaktInfo_div {
-  margin: auto;
-  width: 100%;
-}
-
-#frm_kontaktInfo_div, #kontaktinfo_navn {
-  width: 200px;
-}
-
-#frm_kontaktInfo_div, input[type="number"]{
-  width: 150px;
-}
-
-#kontaktInfo_div fieldset {
-  margin: auto;
-  width: 60%;
-}
-
-#kontakt_btn {
-  background-color: black;
-  color: white;
-  border: none;
-  height: 35px;
-  width: 100px;
-  border-radius: 20px;
-  font-size: 80%;
-}
-
-#kontakt_btn:hover {
-  background-color: rgb(65, 65, 65);
-  color: white;
-}
 
 @media only screen and (max-width: 800px) {
   
@@ -765,7 +615,7 @@ input[type="submit"]:hover{
       margin-left: 5%;
       padding: 20px;
   }
-
+  
   .navbar_inner{
       width: 100%;
       height: 100%;
@@ -775,10 +625,6 @@ input[type="submit"]:hover{
       visibility: hidden;
   }
 
-  p{
-      margin-bottom: 0;
-      padding-bottom: 15%;
-  }
   .content {
     width: 100%;
     margin-left: 0;
@@ -830,44 +676,71 @@ input[type="submit"]:hover{
     width: 100%;
   }
 
-
-    .navbar_inner p {
-
-        font-size: 40px;
-    }
-    #frivilligFlexWrapper{
-      flex-direction: column !important;
+  .navbar_inner p {
+    font-size: 40px;
+  }
+   
+  #frivilligFlexWrapper{
+    flex-direction: column !important;
           
-    }
-    #formWrap>form>label{
-      text-align: center !important;
-      font-size: 5vw !important;
-    }
-    #formWrap>form{
-      margin-left: 0 !important;
-      text-align: right;
-    }
-    .opplastetBilde{
-      margin-left : 5%;
-    }
-
-    #form_divR {
-      margin: auto;
-    }
+  }
     
-    #btnLastOpp {
-      margin-right: 35%;
-      font-size: 80%;
-    }
+  #formWrap>form>label{
+    text-align: center !important;
+    font-size: 5vw !important;
+  }
+  
+  #formWrap>form{
+    margin-left: 0 !important;
+    text-align: right;
+  }
 
-    #form_div {
-      margin-right: 40%;
-      
-    }
+  .opplastetBilde{
+    margin-left : 5%;
+  }
+
+  #form_divR {
+    margin: auto;
+  }
+    
+  #btnLastOpp {
+    margin-right: 35%;
+    font-size: 80%;
+  }
+
+  #form_div {
+    margin-right: 40%;  
+  }
+
+  .kontakt_oss{
+    flex-direction: column;
+  }
+
+  .QnA{
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .Spm{
+    width: 100%;
+  }
+
+  #frm{
+    
+    margin-top: 10%;
+    margin-left: 35%;
+    margin-bottom: 15%;
+  }
+  #filterWrapper {
+    flex-direction: row;
+    padding: 5%;
+    width: 89.6%;
+
+  }
 
 
 
+}
 
-}    
 
 
