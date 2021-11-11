@@ -49,16 +49,11 @@ function formValid(event){// fyres av ved submit, og lagrer verdier fra input.
     inn.appendChild(para)
     inn.appendChild(knapp);// setter in i dokumentet
     
-
-    
-      
-
-
 }
 function hoverIn(){//ender knapp til mørk ved hover
 
    let btn = document.getElementById('knapp');
-   btn.style.backgroundColor='#d3d3d3';
+   btn.style.backgroundColor = "grey"
 }
 function hoverUt(){//setter fargen tilbake til default(hvit)
 
@@ -67,7 +62,6 @@ function hoverUt(){//setter fargen tilbake til default(hvit)
  }
 
  function klikkHjem(){// sender bruker til hjemsiden ved trykk på knappen
-
     window.location.replace('../documents/p3.html');
  }
 

@@ -28,19 +28,20 @@
                            
                         </label><br>
 
-                        <label for="inputBy">Nærmeste by:
+                        <label for="inputBy"> By:
                             <input type="text" name="inputBy" id="inputBy" required pattern = '[a-zA-Zæ,ø,å, ]+' title = 'kun bokstaver og mellomrom godtas!' required><!-- input by, kun bokstaver-->
                         </label><br>
 
+                        <!-- required pattern = '^[a-zA-Z,æ,ø,å,Æ,Ø,Å]+\s\d+$' -->
                         <label for="inputAdr">Adresse:
-                            <input type="text" name="inputAdr" id="inputAdr" required pattern = '^[a-zA-Z,æ,ø,å,Æ,Ø,Å]+\s\d+$' title = 'skrives på formen " Gatenavn 44"' required><!-- regex  som krever at formen på innput er 'et ord+ mellomrom+tall'-->
+                            <input type="text" name="inputAdr" id="inputAdr" title = 'skrives på formen " Gatenavn 44"' required><!-- regex  som krever at formen på innput er 'et ord+ mellomrom+tall'-->
                         </label><br>
 
                         <label for="inputSoveplasser">Antall soveplasser:
                             <input type="number" name="inputSoveplasser" id="inputSoveplasser"  min='1' title = 'angi et gyldig antall soverom!'required >
                         </label><br>
 
-                        <label for="inputStr">Boligens bruksareal:
+                        <label for="inputStr">Boligens bruksareal i m<sup>2</sup>:
                             <input type="number" name="inputStr" id="inputStr" min='3' title = 'kun oppgi størrelse i antall kvm' required >
                         </label><br>
 
@@ -52,6 +53,8 @@
 
                         
                         <button id="btnLastOpp" type='submit'>Last opp:</button>
+                        <br>
+                        <br>
                     </form>
                 </div>
                 <div id = 'opplastning'> 

@@ -14,7 +14,6 @@ body{
     overflow: hidden;
     position: sticky;
     top: 0;
-
 }
 
 .navbar_outer{
@@ -39,7 +38,7 @@ body{
     overflow: hidden;
     height: 60px;
     color: #D3D3D3;
-
+    
 }
 
 .listeDivR{width: 50%;}
@@ -134,8 +133,9 @@ body {
 #filterWrapper {
   display: flex;
   flex-direction: column;
-  background-color: #6fa6ad;
-  padding: 3%;
+  background-color: darkgrey;
+  text-align: center;
+  padding: 2%;
   width: 15%;
   min-height: 100%;
   border: solid 1px black;
@@ -260,11 +260,6 @@ body {
     width: 100%;
 }
 
-
-#frmR>input{
-
-  margin-left: 0;
-}
 
 #food #right{
   min-height: 100%;
@@ -400,17 +395,13 @@ hentet: 27.oktober*/
   padding: 1%;
 
 }
+
   
-#bildeDiv{
-  
-  
-  min-width:100%;
-  
-  margin-top:15%;
-  
-  
-  
+  #bildeDiv{
+    min-width:100%;
+    margin-top:15%;
   }
+
   #opplastning{
   
     
@@ -418,11 +409,12 @@ hentet: 27.oktober*/
     padding: 5%;
   }
   
+
+
   #formWrap{
     display: flex;
     flex-direction: column;
     min-width: 50%;
-    
     padding:3%;
   }
   #formWrap>form>label{
@@ -432,8 +424,6 @@ hentet: 27.oktober*/
     
   }
   #formWrap>form>label>input{
-  
-    
     width: 40%;
     height:7%;
     margin-left: 4%;
@@ -448,6 +438,10 @@ hentet: 27.oktober*/
     margin-left: 15%;
   }
   
+  #formWrap .laanUt_knapp {
+    background-color: red;
+  }
+
   .opplastetBilde{
   
     width: 100%;
@@ -459,16 +453,18 @@ hentet: 27.oktober*/
   }
   #btnLastOpp{
     margin-bottom: 5%;
-    background-color: white;
-    border: solid black 1px;
+    background-color: black;
+    color: white;
+    border: none;
     overflow: hidden;    
     height: 35px;
     border-radius: 20px;
-    width: 20%;
+    width: 25%;
   }
   
   #btnLastOpp:hover{
-    background-color: #d3d3d3;
+    background-color: rgb(65, 65, 65);
+    color: white;
   }
 
   .checkBoxDivR>input{
@@ -478,8 +474,8 @@ hentet: 27.oktober*/
   }
   
 
-@media only screen and (max-width: 600px) {
-  .content {
+/* @media only screen and (max-width: 600px) { */
+  /* .content {
     width: 100%;
     margin-left: 0;
     
@@ -505,25 +501,15 @@ hentet: 27.oktober*/
     font-size: 3vw;
     text-align: left;
     list-style-type: none;
-   
-    
     margin-bottom: 2%;
-  
-  
   }
+
   .listClass>h3{
 
     margin-bottom: 1%;
     font-size: 3vw;
   }
   
-
-  #filterWrapper {
-    width: 15%;
-    flex-direction: row;
-    padding: 5%;
-
-  }
 
   label {
     display: default;
@@ -551,7 +537,6 @@ hentet: 27.oktober*/
         font-size: 40px;
     }
     #frivilligFlexWrapper{
-
       flex-direction: column !important;
           
     }
@@ -565,19 +550,12 @@ hentet: 27.oktober*/
     }
     .opplastetBilde{
       margin-left : 5%;
-    
-          
     }
-}    
 
-#frmR{
+}     */
 
-}
 
 #frm>input{
-
-
-
   width: 100%;
   height: 25px;
   margin-bottom: 15%;
@@ -681,12 +659,13 @@ label {
 }
 #form_div{
   display: flex;
+  text-align: center;
 }
 
-form {
+#form_div form {
   text-align: left;
   padding-left: 20%;
-}
+} 
 
 input{
   margin-bottom: 10px;
@@ -732,6 +711,8 @@ input[type="submit"]:hover{
 }
 
 @media only screen and (max-width: 800px) {
+
+
   #navbar{
       flex-direction: column;
       position: relative;
@@ -787,25 +768,51 @@ input[type="submit"]:hover{
     margin-left: 35%;
     margin-bottom: 15%;
   }
+  #filterWrapper {
+    flex-direction: row;
+    padding: 5%;
+    width: 89.6%;
+
+  }
 
 }
 
-#form input[type="number"], #form input[type="text"]{
+#filterWrapper input[type="number"]{
+  width: 96%;
+}
+
+#filterWrapper #dropDown {
   width: 100%;
 }
 
-#form #dropdown {
-  position: relative;
-  background-color: dodgerblue;
+#kontaktInfo_div {
+  margin: auto;
   width: 100%;
 }
 
 #kontaktInfo_div fieldset {
-  margin-left: -25%;
-  width: 103%;
+  margin-left: 0%;
+  width: 92%;
 }
 
-@media only screen and (max-width: 600px) {
+#kontakt_btn {
+  background-color: black;
+  color: white;
+  border: none;
+}
+
+#kontakt_btn:hover {
+  background-color: rgb(65, 65, 65);
+  color: white;
+}
+
+@media only screen and (max-width: 800px) {
+  
+  #kontaktInfo_div {
+    margin-left: 1%;
+    width: 100%;
+  }
+
   #navbar{
       flex-direction: column;
       position: relative;
@@ -830,5 +837,99 @@ input[type="submit"]:hover{
       margin-bottom: 0;
       padding-bottom: 15%;
   }
-}
+  .content {
+    width: 100%;
+    margin-left: 0;
+    
+  }
+  .input {
+    width: 130px;
+  }
+  #filtrerOverskrift{
+      display: none;
+  }
+
+  .listClass{
+
+    margin-left:5%;
+    padding: 0;
+  }
+
+  #wrapper {
+    flex-direction: column;
+  }
+
+  .listItemClass {
+    font-size: 3vw;
+    text-align: left;
+    list-style-type: none;
+    margin-bottom: 2%;
+  }
+
+  .listClass>h3{
+
+    margin-bottom: 1%;
+    font-size: 3vw;
+  }
+  
+
+  label {
+    display: default;
+    margin-bottom: 2%;
+  }
+  input {
+    display: default;
+  }
+  #contentWrapper {
+    padding: 0;
+    width: 100%;
+  }
+  #masterWrapper {
+    width: 100%;
+  }
+  .checkBoxClass{
+
+    height: 15px;
+    width: 15px;
+    
+  }
+
+    .navbar_inner p {
+
+        font-size: 40px;
+    }
+    #frivilligFlexWrapper{
+      flex-direction: column !important;
+          
+    }
+    #formWrap>form>label{
+      text-align: center !important;
+      font-size: 5vw !important;
+    }
+    #formWrap>form{
+      margin-left: 0 !important;
+      text-align: right;
+    }
+    .opplastetBilde{
+      margin-left : 5%;
+    }
+
+    #form_divR {
+      margin: auto;
+    }
+    
+    #formWrap #btnLastOpp {
+      margin-right: 35%;
+    }
+
+    #form_div {
+      margin-right: 40%;
+      
+    }
+
+
+
+
+}    
+
 

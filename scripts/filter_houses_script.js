@@ -5,7 +5,6 @@
 // Her deklarer vi bolig "databasen" med alle husene som skal vises. 
 cbArray=[];
 boliger = [
-    
     {
         by: "Oslo",
         img: "h6.jpg",
@@ -200,7 +199,7 @@ boliger = [
 
 const sendBtn = document.getElementById("submit")
 const contentWrapper = document.getElementById("contentWrapper")
-const form_div = document.getElementById("form_div")
+const form_div = document.getElementById("form_divR")
 const frm_kontaktInfo = document.getElementById("frm_kontaktInfo")
 const oppe = document.getElementById("oppe")
 const nede = document.getElementById("nede")
