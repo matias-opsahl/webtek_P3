@@ -613,12 +613,13 @@ input{
 input[type="submit"]{
   margin: auto;
   border: none;
-  height: 45px;
+  height: 40px;
   border-radius: 20px;
   background-color: black;
   color: white;
   border: none;
   font-size: 80%;
+  padding: 10px;
   
 }
 
@@ -629,7 +630,20 @@ input[type="submit"]:hover{
 
 #dropDown{
   width: 100%;
-  
+}
+
+#filterWrapper #inPersoner {
+  width: 96%;
+}
+
+#finn_bolig_ul {
+  list-style: none;
+}
+
+#finn_bolig_fieldset {
+  text-align: left;
+  width: 92.1%;
+  margin-left: -0.01%;
 }
 
 @media only screen and (max-width: 800px) {
@@ -699,9 +713,6 @@ input[type="submit"]:hover{
 
 }
 
-#filterWrapper input[type="number"]{
-  width: 96%;
-}
 
 #filterWrapper #dropDown {
   width: 100%;
@@ -712,9 +723,17 @@ input[type="submit"]:hover{
   width: 100%;
 }
 
+#frm_kontaktInfo_div, #kontaktinfo_navn {
+  width: 200px;
+}
+
+#frm_kontaktInfo_div, input[type="number"]{
+  width: 150px;
+}
+
 #kontaktInfo_div fieldset {
-  margin-left: 0%;
-  width: 92%;
+  margin: auto;
+  width: 60%;
 }
 
 #kontakt_btn {

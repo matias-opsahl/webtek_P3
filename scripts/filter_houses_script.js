@@ -360,7 +360,7 @@ form_div.addEventListener("input", (e) => {
 
 // Her lager vi en funksjon som lager en knapp og, og som i tillegg får en eventlistener. Denne koden kjøres
 // bare hvis man submitter uten å ha valgt et hus. Da får man opp denne knappen og litt hjelpetekst, slik at man
-// forstår hva man skal gjøre. 
+// forstår hva man skal gjøre. knappen sender de tilbake til rammede.html siden
 function lagKnapp(){
     nede.innerHTML='';
 
@@ -369,6 +369,9 @@ function lagKnapp(){
     let br2 = document.createElement("br")
     knapp.innerHTML='Tilbake'
     knapp.style.color = 'white';
+    knapp.style.borderRadius = "20px"
+    knapp.style.padding = "8px"
+    knapp.style.fontSize = "80%"
     knapp.addEventListener('click', () => {
         window.location.replace('../documents/rammede.html');
     })
@@ -379,18 +382,21 @@ function lagKnapp(){
     
 
   }
-
+// Denne funksjonen tar inn en liste som parameter, og looper gjennom lista. Den
+// sjekker om noen av input-feltene er krysset av. Hvis de er det så skal de pushes inn i returnList arrayen. 
+// Om ingen blir pushet inn i arrayen betyr det at ingen av checkboxene har blitt huket av.
+// Det betyr også at lengden på returnlist == 0. Derfor lager vi en if-statenment som kan fange oppd ette tilfellet og håndtere det. 
+// hvis den derimot ikke har lengde null skal vi returnere lista, til senere bruk nedenfor. 
 function checkBoxStat(list){
    returnList = [];
    
-   console.log(list.length);
     for (let i=0; i<list.length; i++){
         if (list[i].checked==true)
             returnList.push(filtered_houses[i].adresse);
     }
 
     if(returnList.length==0) {
-        return "Du har ikke søkt noen bolig"
+        return false
     }
 
     else {
@@ -398,11 +404,13 @@ function checkBoxStat(list){
     }
 }
 
+// Vi har mange funksjoner ovenfor som blir satt i spill, men dette er selve utløseren.
+// Denne submitter selve formen og her kjører vi funksjoner som igjen kjører funksjonene ovenfor
 
 frm_kontaktInfo.onsubmit = (e) => {
     e.preventDefault()
        let a = checkBoxStat(cbArray);
-       if (a=="Du har ikke søkt noen bolig"){
+       if (a==false){
         oppe.innerHTML = ""
          
         nede.innerHTML += "<br><br>"
@@ -410,8 +418,8 @@ frm_kontaktInfo.onsubmit = (e) => {
         lagKnapp()
        } 
 
+//  her håndterer vi den suksefulle submitten. Da skriver vi ut litt intuitiv tekst basert på hva som ble fylt inn i input feltene, og hvilken bolig som ble valgt
        else {
-
             kontaktInfo_div.innerHTML = ""
             oppe.innerHTML = ""
             nede.innerHTML = `Du har nå sendt søknad om ${a} ` 
