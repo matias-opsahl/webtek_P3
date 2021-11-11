@@ -13,55 +13,65 @@
         <!-- Ikke rør -->
         <div id="food">
             <div id="frivilligFlexWrapper"><!-- flexwrapper for hele siden -->
-                
-
-
                 <div id='formWrap'>
                     <h2> Registrer bolig for utleie:</h2>
                     <form id="frivilligForm" onsubmit="formValid(event)"><!-- kalles opp når bruker har skrevet gyldige data i formen-->
                         <label for="inputNavn">
                             Fullt navn:
                             <input type="text" name="inputNavn" id="inputNavn" required pattern = '[a-zA-Zæ,ø,å, ]+' title = 'kun bokstaver og mellomrom godtas!' required>
-                        </label><br>
-                        <label for="inputNumber">Telefonnummer:
+                        </label>
+
+                        <br>
+
+                        <label for="inputNumber">
+                            Telefonnummer:
                             <input type="number"  name="inputNumber" id="inputNumber" min='10000000' max = '99999999' maxlength="8" oninvalid="this.setCustomValidity('Må være 8 siffer, kun tall!')" oninput="this.setCustomValidity('')" required=''> <!-- Krever nøyaktig 8 siffer. setter det som feedback, og tømmer den tilbakemeldingen som er default-->
-                           
-                        </label><br>
+                        </label>
+
+                        <br>
 
                         <label for="inputBy"> By:
                             <input type="text" name="inputBy" id="inputBy" required pattern = '[a-zA-Zæ,ø,å, ]+' title = 'kun bokstaver og mellomrom godtas!' required><!-- input by, kun bokstaver-->
                         </label><br>
 
-                        <!-- required pattern = '^[a-zA-Z,æ,ø,å,Æ,Ø,Å]+\s\d+$' -->
-                        <label for="inputAdr">Adresse:
+                        <label for="inputAdr">
+                            Adresse:
                             <input type="text" name="inputAdr" id="inputAdr" title = 'skrives på formen " Gatenavn 44"' required><!-- regex  som krever at formen på innput er 'et ord+ mellomrom+tall'-->
-                        </label><br>
+                        </label>
+                        
+                        <br>
 
-                        <label for="inputSoveplasser">Antall soveplasser:
+                        <label for="inputSoveplasser">
+                            Antall soveplasser:
                             <input type="number" name="inputSoveplasser" id="inputSoveplasser"  min='1' title = 'angi et gyldig antall soverom!'required >
-                        </label><br>
+                        </label
+                        
+                        ><br>
 
-                        <label for="inputStr">Boligens bruksareal i m<sup>2</sup>:
+                        <label for="inputStr">
+                            Boligens bruksareal i m<sup>2</sup>:
                             <input type="number" name="inputStr" id="inputStr" min='3' title = 'kun oppgi størrelse i antall kvm' required >
-                        </label><br>
-
+                        </label>
                         
-                            <label for="inBilde">
-                                Last opp et bilde:
-                                <input type="file" id="fileUpload"  name="fileUpload" accept="image/*" onchange="visBilde(event)"  title = 'last opp et bilde av boligen!' required='true'><!-- onchange funksjonen, kaller en js funksjon som legger bildet inn i dokumentet-->
-                            </label><br>
+                        <br>
 
+                        <label for="inBilde">
+                            Last opp et bilde:
+                            <input type="file" id="fileUpload"  name="fileUpload" accept="image/*" onchange="visBilde(event)"  title = 'last opp et bilde av boligen!' required='true'><!-- onchange funksjonen, kaller en js funksjon som legger bildet inn i dokumentet-->
+                        </label>
                         
+                        <br>
+
                         <button id="btnLastOpp" type='submit'>Last opp:</button>
+                        
                         <br>
                         <br>
+
                     </form>
                 </div>
-                <div id = 'opplastning'> 
 
-                  <div id= 'bildeDiv'>
-                    
-                  </div>
+                <div id = 'opplastning'> 
+                    <div id = 'bildeDiv'></div>
                 </div>
             </div>
         </div>
