@@ -7,7 +7,6 @@ const kontakt_fieldset = document.getElementById("kontakt_fieldset")
 // Her henter vi ut dataen fra navn og epost. Så lager vi en fieldset og putter dataen inn
 // på et passende format, som gir brukeren en følelse av at ting gikk som det skulle
 
-
 frm.onsubmit = (e) => {
     e.preventDefault()
     kontakt_fieldset.style.display = "none"
