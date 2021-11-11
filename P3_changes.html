@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P3 Changes</title>
+</head>
+
+<body>
+    <section>
+        <div>
+            <h2>P3 Design Endringer</h2>
+            <p>
+                <h3>1. Dokument Detaljer</h3>
+                <br>
+                Jesper, Daniel, Sander, Matias og Chris
+                <br>
+                IT2805 November 2021
+                <br>
+            </p>
+        </div>  
+        <div>
+            <h2>Administraive Detaljer</h2>
+            <p>
+                Klientens navn: Krisebolig
+                <br>
+                Nettstedet navn: Krisebolig 
+                <br>
+                Kontaktperson: Jacop Hansen 
+                <br>
+                Link til nettisden: <a href=""> Klikk her</a>
+
+            </p>
+        </div>
+        <div class="navigationStructure">
+            <h3>Navigation Structure</h3>
+            <p>
+                Vi har beholdt navigasjonsstrukturen vi utarbeidet i P2.
+                Vi har ikke lagt til noen nye nettsider, eller gjort noen endringer på struktureringen av de planlagte nettsidene.
+
+            </p>
+
+        </div>
+        <div class="pageLayoutAndAppearance">
+            <h3>Page layout and Apperance</h3>
+            <p>
+                Vi har måttet endre deler av CSS vi presenterte i P2. Vi har gjort følgende endringer:
+
+            </p>
+            
+        </div>
+        <div class="content">
+            <h3>Content</h3>
+
+            <h4>Felles styling</h4>
+            <p>
+                Vi endret høyden på navbaren. Vi fant ut at det beste ble å sette responsiv skriftstørrelse på teksen i navbaren (1.75vw), og at vi skalerer høyden på navbaren utifra høyden på logoen i navbaren.
+                Vi valgte å gjøre dette fordi da slipper vi at logoen blir upropsjonal i størrelsen.
+                <BR>
+                MÅ SKRIVE OM FOOTER
+        
+            </p>
+
+            <h4>Hjemmesiden</h4>
+            <p>
+                <!-- På alle nettsidene har vi lagt til mediaqueries for å ha et responsivt design for å gjøre siden brukervennlig for mobilbrukere.
+                Når width på hjemmesiden blir for liten, så endres utformingen av nettsiden og Navbaren.
+                I stedet for å ha en navigasjonsbar som ligger vannrett på toppen av nettsiden, så blir navbaren 
+                og sidene for rammede og for frivillige liggende loddrett. Dette er gjennomgående for alle nettsidene. -->
+            </p>
+
+            <h4>Finn bolig </h4>
+            <p>
+                <!-- Vi har lagt inn en skille linje, mellom navn og telefonnummer for å spesifisere at det ikke er søkeparametere.
+                Deretter valgte vi å plassere feltene for personalia på bunn av siden for å gjøre siden mer oversiktelig. 
+                Det vil si feltene "Fullt navn på kontaktperson:" og "Telefonnummer på kontaktperson" -->
+            </p>
+            <h4>Tilby bolig</h4>
+            <p>
+                <!-- Vi har lagt til adresse i formet og byttet ut submit knappen med en tilsvarende knapp "last opp".
+                I tillegg så vil bildet man laster opp legge seg til venstre. -->
+            </p>
+            <h4>Om oss</h4>
+            <p>
+                På "Om oss" siden gjorde vi ikke noen endringer som påvirker utseendet på siden. Vi la til informasjon om de tre viktigste personene i selskapet Krisebolig.
+                Vi la til info om Krisebolig over informasjon om de vitkigste aktørene i Krisebolig ettersom at vi følte at det ble en mer naturlig flyt på denne måten. 
+            </p>
+            <h4>Kontakt oss</h4>
+            <p>
+                På "Kontakt oss" gjorde vi ikke noen spesielle endringer på stylingen. Vi la til en fieldset rundt "Ofte stilte spørsmål" og "Kontakt oss" ettersom at dette gjør det mer ryddig og gir mer oversikt.
+                Vi valgte en mer nøytral mørk-farge på "Send inn" knappen istedenfor den blå som var avbildet på mockupen.
+            </p>
+
+
+
+
+        </div>
+
+        <div class="minimumRequirements">
+            <h3>Minimum requirements</h3>
+            <p>
+                css'en som er spesfikk for siden er gjort av de/den som har hatt ansvaret for utformingen av siden.
+                Det vil si at overordnede ansvaret for css til om oss har Chris stått for, kontakt oss har Daniel stått for,
+                hjemmeside har sander stått for, rammede har Matias stått for og frivillige har Jesper stått for.
+                <br>
+                <br>
+                Chris og Daniel har samarbeidet på sidene kontakt oss og om oss siden og tilhørende css.
+                videre lagde de javascript funksjonen som lager faq drop down skjemaet som skal gjøre det enklere for 
+                brukerene å få svar på ofte stilte spørsmål. Videre hadde de hovedansvaret for utformingen av tilbakemeldingskjema og gjennomføring av kvalitative og kvatitative undersøkelser i forbindelse P4, og ferdigstillingen av P3.
+                <br>
+                <br>
+                Sander har stått for mockupsene og lagd logoen til krisebolig.
+                Han lagde de felles tingene som går igjen på alle sidene.
+                Den felles javascripten består av navbaren og footeren.
+                CSSen består av alt som er felles av skrifttype, flexboxer, størrelser osv.
+                <br>
+                <br>
+                Matias hadde hovedansvaret for funksjonene til rammede.html siden. Disse har blitt skrevet i filter_houses_script.js 
+                Jesper har også vært inne på denne siden, og laget funksjonaliteten til checkbox elementene. På denne siden har man 4 input 
+                felter som må fylles ut, før man får opp boligene som er filtrert på den informasjonen du har skrevet inn. 
+                Hvis du ikke har krysset av på en bolig før du prøver å sende inn, så skal du få varsel om dette. Om du har valgt bolig før du sender inn
+                skal informasjonen til den gjeldene boligen/boligene bli skrevet ut på siden. 
+                <br>
+                <br>
+                Jesper har hatt ansvaret for siden 'frivillige' og har laget funksjonene definert i 'frivillige_script.js'
+                Denne siden er et form som tar inn bruker info for å legge ut bolig til utleie. Formet er onsubmit, som går gjennom dersom 
+                form validation er ok, submittes formet og kjører en js funksjon som lager en tilbakemelding til brukeren om at boligen er lagt ut.
+                uten backend funksjonalitet blir er formet en 'dummy' og boligen vil ikke vises etter man går ut av siden.
+                <br>
+                <br>
+
+
+            </p>      
+        </div>
+
+        <div class="feedback">
+            <h3>Endringer på bakgrunn av feedback</h3>
+            <p>
+                Etter responsen på undersøkelsen var vi nødt til å gjøre et par endringer for å ferdigstille nettsiden.
+                Etter tilbakemeldingene fikk vi lagt til attributen required i formet som fylles ut for å søke bolig.
+                Dette sørger for at krisebolig alltid har oversikt over hvem som har sendt inn henvendelser angående leie av bolig.
+                
+                I tillegg har vi endret overskriften og navnene i navigasjonsbaren fra henholdvis rammede og frivillige, til finn bolig og låne bolig.
+                Det vil gjøre det enklere for nettsidens brukere å navigere på siden. Videre så ble det gjort endringer i spørsmål og svar delen.
+                Vi la til et pluss tegn for å indikere at her er det mer info, og en minus tegn for å indikere at man kan lukke dropdown menyen etter at man
+                har fått svar på spørsmålet. I har vi lagt til et favicon for å heve det helhetlige inntrykket av nettsiden.
+                Videre har vi fått byttet ut bildene på forsiden. Etter å ha sittet å jobbet med prosjektet, er det lett å bli litt låst i eget mindsett.
+                Forsidebildene er endret til mer nøytrale bilder som er mer pedagogiske og sinnsnøytrale. 
+
+                
+            </p>
+        </div>
+        
+            <h3>Planlagt liste over filer og mapper</h3>
+                <ul>
+                    <li>hjemmeside.html</li>
+                    <li>om_oss.html</li>
+                    <li>kontakt.html</li>
+                    <li>rammede.html</li>
+                    <li>frivillige.html</li>
+                    <li>images/</li>
+                        <li><ul>
+                            <li>boliger/</li>                                    
+                            <li><ul>
+                                <li>Oslo</li>
+                                <li><ul>
+                                    <li>h1.jpg</li>
+                                    <li>l1.jpg</li>
+                                    <li>r1.jpg</li>
+                                </ul></li>
+                            </ul></li>
+                            <li><ul>
+                                <li>Kristiansand</li>
+                                <li><ul>
+                                    <li>h2.jpg</li>
+                                    <li>l2.jpg</li>
+                                    <li>r2.jpg</li>
+                                </ul></li>
+                            </ul></li>
+                            <li><ul>
+                                <li>Bergen</li>
+                                <li><ul>
+                                    <li>h3.jpg</li>
+                                    <li>l3.jpg</li>
+                                    <li>r3.jpg</li>
+                                </ul></li>
+                            </ul></li>
+                            <li><ul>
+                                <li>Trondheim</li>
+                                <li><ul>
+                                    <li>h4.jpeg</li>
+                                    <li>l4.jpeg</li>
+                                    <li>r4.jpeg</li>
+                                </ul></li>
+                            </ul></li>
+                            <li><ul>
+                                <li>Tromsø</li>
+                                <li><ul>
+                                    <li>h5.jpeg</li>
+                                    <li>l5.jpeg</li>
+                                    <li>r5.jpeg</li>
+                                </ul></li>
+                            </ul></li>
+                            <li><ul>    
+                                <li>Molde</li>
+                                <li><ul>
+                                    <li>h6.jpeg</li>
+                                    <li>l6.jpeg</li>
+                                    <li>r6.jpeg</li>
+                                </ul></li>
+                            </ul></li>
+                            <li><ul>
+                                <li>Fredrikstad</li>
+                                <li><ul>
+                                    <li>h7.jpeg</li>
+                                    <li>l7.jpeg</li>
+                                    <li>r7.jpeg</li>
+                                </ul></li>
+                            </ul></li>
+                        </ul></li>
+                    <li>scripts/</li>
+                        <li>
+                            <ul>
+                                <li>finnBolig_pres.js</li>
+                                <li>finnBolig_filt.js</li>
+                                <li>kontaktOss.js</li>
+                                <li>laanUt.js</li>
+                            </ul>
+                        </li>
+                    <li>styling.css</li>            
+                </ul>
+            <h3>Endelig liste over filer og mapper</h3>
+                <ul>
+                    <li>hjemmeside.html</li>
+                    <li>om_oss.html</li>
+                    <li>kontakt.html</li>
+                    <li>rammede.html</li>
+                    <li>frivillige.html</li>
+                    <li>styling.css</li> 
+                    <li>img/</li>
+                    <li><ul>
+                            <li>bolig_i_byer</li>
+                            <li><ul>
+                                <li>h1.jpg</li>
+                                <li>h2.jpg</li>
+                                <li>h3.jpg</li>
+                                <li>h4.jpg</li>
+                                <li>h5.jpg</li>
+                                <li>h6.jpg</li>
+                                <li>h7.jpg</li>
+                                <li>l1.jpg</li>
+                                <li>l2.jpg</li>
+                                <li>l3.jpg</li>
+                                <li>l4.jpg</li>
+                                <li>l5.jpg</li>
+                                <li>l6.jpg</li>
+                                <li>l7.jpg</li>
+                                <li>r1.jpg</li>
+                                <li>r2.jpg</li>
+                                <li>r3.jpg</li>
+                                <li>r4.jpg</li>
+                                <li>r5.jpg</li>
+                                <li>r6.jpg</li>
+                                <li>r7.jpg</li>
+                            </ul></li>
+                        </ul></li>
+                        <li><ul>
+                            <li>forside</li>
+                            <li><ul>
+                                <li>frivillige.jpg</li>
+                                <li>rammede.jpg</li>
+                            </ul></li>
+                        </ul></li>
+                        <li><ul>
+                            <li>om oss</li>
+                            <li><ul>
+                                <li>JacopHansen.jpg</li>
+                                <li>mr.lahey.jpg</li>
+                                <li>randy.jpg</li>
+                            </ul></li>
+                        </ul></li>
+                        <li><ul>
+                            <li>ikon_frivilliger</li>
+                            <li><ul>
+                                <li>h4.jpeg</li>
+                                <li>l4.jpeg</li>
+                                <li>r4.jpeg</li>
+                            </ul></li>
+                        </ul></li>
+                        <li><ul>
+                    <li>scripts/</li>
+                        <li>
+                            <ul>
+                                <li>frivillige_script.js</li>
+                                <li>kontaktOss.js</li>
+                                <li>rammede_script.js</li>
+                            </ul>
+                        </li>       
+                    </ul>
+                </ul>        
+
+        <h2>Oversikt over endelig ansvarsfordeling</h2>
+        <table style="width:100%" class='ansvar'>
+            <tr>
+            <th>Filnavn</th>
+            <th>Beskrivelse</th>
+            <th>Ansvarsområde</th>
+            <th>Tidsfrist</th>
+            </tr>
+            <tr>
+            <td>om_oss.html</td>
+            <td>Side som forteller kort om krisebolig og faq</td>
+            <td>Chris og Daniel</td>
+            <td> 05.11 </td>
+            </tr>
+            <tr>
+            <td>hjemmeside.html</td>
+            <td>Hjemmesiden til krisebolig</td>
+            <td>Sander</td>
+            <td>05.11</td>
+            </tr>
+            <tr>
+                <td>rammede.html</td>
+                <td>side som presenterer tilgjengelige bosteder</td>
+                <td>Jesper, Mathias</td>
+                <td>10.11</td>
+            </tr>
+            <tr>
+                <td>kontakt.html</td>
+                <td>mappe, for media</td>
+                <td>Matias</td>
+                <td>10.11</td>
+            </tr>
+            <tr>
+                <td>rammede_script.js</td>
+                <td>presenter()</td>
+                <td>Matias</td>
+                <td>12.11</td>
+            </tr>
+            <tr>
+                <td>kontaktOss.js</td>
+                <td>visSvar.js</td>
+                <td>Chris og Daniel</td>
+                <td>12.11</td>
+            </tr>
+            <tr>
+                <td>frivillige_script.js</td>
+                <td>InndataSjekk()</td>
+                <td>Finnes ikke</td>
+                <td>05.11</td>
+            </tr>
+            <tr>
+                <td>Styling.css</td>
+                <td>stilark for alle sidene</td>
+                <td>samtlige</td>
+                <td>15.11</td>
+            </tr>
+        </table>
+    </section>
+</body>
+</html>

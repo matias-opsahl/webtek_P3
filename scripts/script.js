@@ -42,7 +42,7 @@ navbar_inner_img.setAttribute('class', 'navbar_inner_img')
 
 // setter attributene til logo
 const logo_a = document.createElement('a')
-logo_a.setAttribute('href', 'p3.html')
+logo_a.setAttribute('href', 'hjemmeside.html')
 
 const logo_img = document.createElement('img')
 logo_img.setAttribute('src', '../img/logo.jpeg')
@@ -56,7 +56,7 @@ navbar.appendChild(navbar_outer_img)
 
 // setter attributene til hjemmeside link
 const hjem_a = document.createElement('a')
-hjem_a.setAttribute('href', 'p3.html')
+hjem_a.setAttribute('href', 'hjemmeside.html')
 
 const hjem_p = document.createElement('p')
 const hjem_tekst = document.createTextNode('Hjemmeside')
