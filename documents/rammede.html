@@ -45,9 +45,18 @@
                
                 <div id = 'contentWrapper'>
                    <div id="oppe">
-                    <h2 id='tilgjengligHead'> Tilgjengelige boliger</h2>                   
+                    <h2 id='tilgjengligHead'> Tilgjengelige boliger </h2>
+                    <fieldset id="finn_bolig_fieldset">
+                        <legend><h4 id="ul_header">Skaff bolig på tre enkle skritt</h4></legend>
+                    
+                    <ul id="finn_bolig_ul">
+                        <li>1. Huk av bolig</li>
+                        <li>2. Bla nederst til siden, og fyll ut skjemaet</li>
+                        <li>3. Send søknad</li>
+                    </ul>                  
+                    </fieldset> 
                    </div>
-
+                <br>
                 <div id="nede"> </div>
                 <div id="feilMelding_div"></div>
                 <br>
@@ -55,17 +64,19 @@
                     <form id="frm_kontaktInfo">
                         <fieldset>
                             <legend>
-                                <h3>KontaktInformasjon</h3>
+                                <h3>Kontakt Informasjon</h3>
                             </legend>
 
                             <label> Ditt navn:
+                                <br>
                                 <input type='text' class='input' id="kontaktInfo_navn" required>
                             </label>
-                            
+                                <br><br>
                             <label> Telefon nr:
+                                <br>
                                 <input type="number"  name="inputNumber" class="input" id="kontaktInfo_tlf" min='10000000' max = '99999999' maxlength="8" oninvalid="this.setCustomValidity('Må være 8 siffer, kun tall!')" oninput="this.setCustomValidity('')" required=''>
                             </label>
-                            
+                                <br><br>
                             <input type="submit" id="submit" value="Send inn søknad"/>
                         </fieldset>
                     </form>

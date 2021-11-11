@@ -26,10 +26,6 @@ function formValid(event){// fyres av ved submit, og lagrer verdier fra input.
     let inn = document.getElementById('formWrap');
     inn.innerHTML=''// fjerner formet
     
-    
-    
-    
-   
     let b =  'boligen din ' +bolig+' er nå lagt ut til utlån.'// streng til textnoden melding
     let melding = document.createTextNode(b);
     let overText = document.createTextNode('Takk for ditt bidrag, '+navn+'!')//skriver ut overskrift på tilbakemelding
@@ -39,10 +35,13 @@ function formValid(event){// fyres av ved submit, og lagrer verdier fra input.
     let knapp = document.createElement('button');//knapp som tar deg til hjemsiden
     knapp.className ='btn';
     knapp.innerHTML='Hjem';
+    knapp.style.backgroundColor = "black"
+    knapp.style.color = "white"
+    knapp.style.border = "none"
     knapp.setAttribute('id','knapp');
-    knapp.addEventListener('mouseover',hoverIn);// for farge endring ved hover
+    knapp.addEventListener('mouseover',hoverIn); // for farge endring ved hover
     knapp.addEventListener('mouseout',hoverUt);
-    knapp.addEventListener('click',klikkHjem);// event listener klikk på knappen
+    knapp.addEventListener('click',klikkHjem); // event listener klikk på knappen
 
     para.appendChild(melding)
     inn.appendChild(overskrift);
@@ -53,15 +52,15 @@ function formValid(event){// fyres av ved submit, og lagrer verdier fra input.
 function hoverIn(){//ender knapp til mørk ved hover
 
    let btn = document.getElementById('knapp');
-   btn.style.backgroundColor = "grey"
+   btn.style.backgroundColor = "rgb(65, 65, 65)";
 }
 function hoverUt(){//setter fargen tilbake til default(hvit)
 
     let btn = document.getElementById('knapp');
-    btn.style.backgroundColor='white';
+    btn.style.backgroundColor='black';
  }
 
  function klikkHjem(){// sender bruker til hjemsiden ved trykk på knappen
-    window.location.replace('../documents/p3.html');
+    window.location.replace('../documents/hjemmeside.html');
  }
 
